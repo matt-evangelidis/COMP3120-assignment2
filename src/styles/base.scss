@@ -1,10 +1,15 @@
 @import "variables";
 @import "mixins";
-//? Underscrores at the start of files can be left out (allows underscores to be used to force files to be sorted to the top of the folder)
+
+* {
+    font-family:sans-serif;
+}
 
 #hw {
+    //FIXME: This code is for demo purposes only, remove once no longer needed
     background-color:$test-bg-color;
     padding-top:$another-var * 3;
+    text-align:center;
 
     @include border-radius(100px);
         //? When this scss file is rendered out to regular css, all contents of the 'border-radius' mixin are inserted here
