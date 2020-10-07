@@ -1,4 +1,4 @@
-// Mixins allow you to predefine large chunks of css that can be copied while inserting certain parameters
+//? Mixins allow you to predefine large chunks of css that can be copied while inserting certain parameters
 
 //@param radius { number } => The desired border radius
 @mixin border-radius($radius) {
