@@ -1,0 +1,12 @@
+// Mixins allow you to predefine large chunks of css that can be copied while inserting certain parameters
+
+//@param radius { number } => The desired border radius
+@mixin border-radius($radius) {
+    //# Sets border radius to passed 'radius'
+    //? THe border radius property requries many backup properties to make sure it works on all browsers, so we can use a mixin to let us include all the properties in one line
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}

@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+//? Underscrores at the start of files can be left out (allows underscores to be used to force files to be sorted to the top of the folder)
+
+#hw {
+    background-color:$test-bg-color;
+    padding-top:$another-var * 3;
+
+    @include border-radius(100px);
+        //? When this scss file is rendered out to regular css, all contents of the 'border-radius' mixin are inserted here
+
+    .world {
+        //? You can nest selectors, so this only selects elements with the '.world' class that are children of '#hw'
+        color:blue;
+    }
+
+    &:hover {
+        //? Using '&' acts as if you are writing the parent selector
+        //? So here, because it is inside the '#hw' scope, the & symbol acts as if it is '#hw'
+        //? This allows us to select pseudo elements without having to define it in a separate scope like you do in regular css
+        background-color:pink;
+    }
+}
