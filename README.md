@@ -26,7 +26,7 @@ This app makes use of the 'Better Comments' extension for Visual Studio Code and
     <li style="background-color:#CCCCCC; color:black;"><code style="background-color:#CCCCCC">//DEPLOYMENT: Used to indicate code that is only intended for testing and needs to be modified or removed before deployment. Instructions on how the code needs to be modified must be included.</code></li>
 </ul>
 
-<style>
+<!-- <style>
     body {
         background-color:#282C34;
     }
@@ -38,4 +38,4 @@ This app makes use of the 'Better Comments' extension for Visual Studio Code and
     hr.divider {
         height:1px;
     }
-</style>
+</style> -->
