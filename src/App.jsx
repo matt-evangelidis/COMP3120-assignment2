@@ -1,4 +1,5 @@
 import "./styles/base.scss";
+import "./styles/forms.scss";
 
 import React from "react";
 
@@ -8,6 +9,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import theme from "./Theme";
+import Login from "./components/auth/Login";
 
 function App() {
 	return (
@@ -20,9 +22,7 @@ function App() {
 				<div className="App">
 					<Switch>
 						<Route path="/">
-							<h1 id="hw">
-								Hello <span className="world">World</span>
-							</h1>
+							<Login />
 						</Route>
 					</Switch>
 				</div>

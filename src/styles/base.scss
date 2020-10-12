@@ -2,28 +2,5 @@
 @import "mixins";
 
 * {
-    font-family:sans-serif;
-}
-
-#hw {
-    //FIXME: This code is for demo purposes only, remove once no longer needed
-    background-color:$test-bg-color;
-    padding-top:$another-var * 3;
-    text-align:center;
-
-    @include border-radius(100px);
-        //? When this scss file is rendered out to regular css, all contents of the 'border-radius' mixin are inserted here
-        //? See '_mixins.scss' for the definition of this mixin
-
-    .world {
-        //? You can nest selectors, so this only selects elements with the '.world' class that are children of '#hw'
-        color:blue;
-    }
-
-    &:hover {
-        //? Using '&' acts as if you are writing the parent selector
-        //? So here, because it is inside the '#hw' scope, the & symbol acts as if it is '#hw'
-        //? This allows us to select pseudo elements without having to define it in a separate scope like you do in regular css
-        background-color:pink;
-    }
+	font-family: sans-serif;
 }
