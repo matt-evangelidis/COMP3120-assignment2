@@ -4,8 +4,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 function Login() {
-	const [username, setUsername] = useState(null);
-	const [password, setPassword] = useState(null);
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
 
 	const handlers = {
 		username: (value) => setUsername(value),
