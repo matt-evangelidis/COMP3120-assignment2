@@ -1,11 +1,9 @@
-import util from './util'
 //mongoose schema
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
+const util = require('./util')
 
 const url = process.env.MONGODB_URI
-console.log("Connecting to", url)
-
 util.mongooseConnect(url)
 
 const userSchema = new mongoose.Schema({

@@ -13,19 +13,23 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
     "mongoose-unique-validator": "^2.0.3",
     "node-sass": "^4.14.1",
+    "passport": "^0.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "validator": "^13.1.17"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "mongoUser": "node server/models/userTest.js"
   },
   "eslintConfig": {
     "extends": "react-app"
