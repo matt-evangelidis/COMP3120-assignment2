@@ -1,8 +1,12 @@
-form .input {
-	// margin-left: 2px;
-	margin: auto;
+form {
+	padding: 8px;
 
-	&:not(:last-child) {
+	.MuiInputBase-root {
+		// margin: auto;
 		margin-bottom: 8px;
+	}
+
+	.MuiButtonBase-root:not(:last-child) {
+		margin-bottom: 4px;
 	}
 }
