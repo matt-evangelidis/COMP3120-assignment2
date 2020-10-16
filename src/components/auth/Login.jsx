@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
@@ -18,39 +20,25 @@ function Login() {
 				variant="outlined"
 				fullWidth
 				label="Username"
-				color="secondary"
 				value={username}
 				onChange={(e) => handlers.username(e.target.value)}
-				className="input"
 			/>
 			<TextField
 				variant="outlined"
 				fullWidth
 				label="Password"
-				color="secondary"
 				value={password}
 				onChange={(e) => handlers.password(e.target.value)}
 				type="password"
-				className="input"
 			/>
-			<Button
-				variant="contained"
-				color="secondary"
-				className="input"
-				disableElevation
-				fullWidth
-			>
+			<Button variant="contained" disableElevation fullWidth color="primary">
 				Login
 			</Button>
-			<Button
-				variant="outlined"
-				color="secondary"
-				className="input"
-				disableElevation
-				fullWidth
-			>
-				Sign Up
-			</Button>
+			<Link to="/register">
+				<Button variant="outlined" disableElevation fullWidth color="primary">
+					Register
+				</Button>
+			</Link>
 		</form>
 	);
 }
