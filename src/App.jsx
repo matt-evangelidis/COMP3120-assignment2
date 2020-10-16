@@ -7,11 +7,15 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Paper from "@material-ui/core/Card";
 
 import theme from "./Theme";
 import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 
 function App() {
+	const formCardStyle = { width: "700px", margin: "auto" };
+
 	return (
 		<ThemeProvider theme={theme}>
 			{/* Passes a 'theme' object down to children component which Material UI automatically integrates into its component styling */}
@@ -21,8 +25,15 @@ function App() {
 			<Router>
 				<div className="App">
 					<Switch>
+						<Route path="/register">
+							<Paper style={formCardStyle}>
+								<Register />
+							</Paper>
+						</Route>
 						<Route path="/">
-							<Login />
+							<Paper style={formCardStyle}>
+								<Login />
+							</Paper>
 						</Route>
 					</Switch>
 				</div>
