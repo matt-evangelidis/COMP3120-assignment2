@@ -1,10 +1,8 @@
-form .input:not(:last-child) {
-	margin-bottom: 8px;
-}
-
 form .input {
 	// margin-left: 2px;
-	width: 95%;
 	margin: auto;
-	flex-basis: 100%;
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
 }
