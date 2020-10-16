@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 function Login() {
 	const [username, setUsername] = useState("");
@@ -16,6 +17,9 @@ function Login() {
 
 	return (
 		<form>
+			<Typography variant="h4" component="h1">
+				Login
+			</Typography>
 			<TextField
 				variant="outlined"
 				fullWidth

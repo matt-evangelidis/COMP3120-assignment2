@@ -2,7 +2,9 @@ import React from "react";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+
+// import Paper from "@material-ui/core/Paper";
 // import { withStyles } from "@material-ui/core/styles";
 
 // const styles = {
@@ -46,7 +48,7 @@ class Register extends React.Component {
 	}
 	// Registration form
 	render() {
-		const { classes } = this.props;
+		// const { classes } = this.props;
 		const { errors } = this.state;
 
 		/* I removed the 'Paper' element because I think stuff like paper or cards should not be part of the actual component
@@ -54,6 +56,9 @@ class Register extends React.Component {
         the register menu in a different place/context it might be awkward */
 		return (
 			<form onSubmit={this.handleSubmit}>
+				<Typography variant="h4" component="h1">
+					Register
+				</Typography>
 				<TextField
 					type="username"
 					label="Username"

@@ -1,6 +1,10 @@
 form {
 	padding: 8px;
 
+	& > h1 {
+		margin-bottom: 8px !important;
+	}
+
 	.MuiInputBase-root {
 		// margin: auto;
 		margin-bottom: 8px;
