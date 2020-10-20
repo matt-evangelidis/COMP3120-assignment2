@@ -8,7 +8,7 @@ const validateLoginInput = require("../validation/login");
 // const validateRegisterInput = require('../validation/register')
 
 //# login user if the correct information is used
-router.post("/login", (req, res) => {
+router.route("/login").post((req, res) => {
 	const { errors, isValid } = validateLoginInput(req.body);
 
 	if (!isValid) {
@@ -18,10 +18,10 @@ router.post("/login", (req, res) => {
 	//*AUTHENTICATION HERE
 });
 
-router.get("/:username", (req, res) => {
+router.route("/:username").get((req, res) => {
 	const username = req.params.username;
 });
 
-router.get("/", (req, res) => {});
+router.route("/").get((req, res) => {});
 //
 module.exports = router;
