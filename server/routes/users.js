@@ -6,7 +6,7 @@ const passport = require("passport");
 const validateLoginInput = require("../validation/login");
 // const validateRegisterInput = require('../validation/register')
 
-// login user is the correct information is used
+//# login user if the correct information is used
 router.route("/login").post((req, res) => {
 	const { errors, isValid } = validateLoginInput(req.body);
 
