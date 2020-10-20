@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.json);
 app.use("/api/users", usersRouter);
 
-app.get("/", (req, res) => {
-	res.send("<h1>Hello World, but this time it came from the server<h1/>");
+app.get("/*", (req, res) => {
+	res.send("<h1>Hello World, but this time it came from the server</h1>");
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.BACKEND_PORT || process.env.PORT || 3001;
 console.log(PORT);
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);
