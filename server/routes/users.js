@@ -34,7 +34,7 @@ router.route("/login").post((req, res) => {
 		id: user._id,
 	}
 
-		// If username and password are correct, a token is created, which contains username, user id in a 
+	// If username and password are correct, a token is created, which contains username, user id in a 
 	// digitally signed form; it is signed using a string from the environment variable SECRET as the secret
 	const token = jwt.sign(userForToken, process.env.SECRET)
 
