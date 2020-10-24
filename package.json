@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"@material-ui/core": "^4.11.0",
+		"@material-ui/icons": "^4.9.1",
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
@@ -13,12 +14,14 @@
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"jsonwebtoken": "^8.5.1",
+		"material-design-icons": "^3.0.1",
 		"mongoose": "^5.10.9",
 		"mongoose-unique-validator": "^2.0.3",
 		"node-sass": "^4.14.1",
 		"nodemon": "^2.0.5",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-grid-layout": "^1.1.1",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "3.4.3",
 		"validator": "^13.1.17"

@@ -1,15 +1,31 @@
 @import "variables";
 @import "mixins";
 
-* {
-	font-family: sans-serif;
-}
-
 a {
 	text-decoration: none;
 }
 
 .App {
-	display: flex;
+	$nav-bar-height: 64px + 8 * 2;
+
 	min-height: 100vh;
+
+	.nav-bar {
+		height: $nav-bar-height;
+
+		* {
+			color: white;
+		}
+	}
+
+	.content {
+		min-height: calc(100vh - #{$nav-bar-height});
+		margin: auto;
+		display: flex;
+	}
+}
+
+.MuiPaper-root,
+.MuiCard-root {
+	padding: 8px;
 }
