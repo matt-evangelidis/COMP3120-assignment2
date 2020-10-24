@@ -1,16 +1,14 @@
 import "./styles/base.scss";
 import "./styles/forms.scss";
 
-<<<<<<< HEAD
+
 import React, {useState} from 'react';
-=======
 import "material-design-icons/iconfont/material-icons.css";
 
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 
 import React, { useState } from "react";
->>>>>>> bd198cf9792368b2d920e43faacc54b83b41e8b3
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -19,19 +17,16 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 
 import theme from "./Theme";
-<<<<<<< HEAD
 import Login from "./components/LoginForm";
 //import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Button from './components/Button'
-=======
 
 import Header from "./components/layout/header";
 
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Sheet from "./components/flex-sheet/Sheet";
->>>>>>> bd198cf9792368b2d920e43faacc54b83b41e8b3
 
 function App() {
 	const formCardStyle = { width: "700px", margin: "auto" };
@@ -55,7 +50,6 @@ function App() {
 			{/*This eliminates visual discrepancies caused by differing default browser stylesheets */}
 			<Router>
 				<div className="App">
-<<<<<<< HEAD
 				<div>
 					{user !== null
 					? <span>
@@ -80,7 +74,6 @@ function App() {
 							</Paper>
 						</Route>
 					</Switch>
-=======
 					<Header />
 					<div className="content">
 						<Switch>
@@ -99,7 +92,6 @@ function App() {
 							</Route>
 						</Switch>
 					</div>
->>>>>>> bd198cf9792368b2d920e43faacc54b83b41e8b3
 				</div>
 			</Router>
 		</ThemeProvider>
