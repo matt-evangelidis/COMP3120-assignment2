@@ -20,6 +20,7 @@ a {
 
 	.content {
 		min-height: calc(100vh - #{$nav-bar-height});
+		margin: auto;
 		display: flex;
 	}
 }
