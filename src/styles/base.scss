@@ -13,3 +13,8 @@ a {
 	display: flex;
 	min-height: 100vh;
 }
+
+.MuiPaper-root,
+.MuiCard-root {
+	padding: 8px;
+}

@@ -1,17 +1,21 @@
 import "./styles/base.scss";
 import "./styles/forms.scss";
 
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+
 import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Paper from "@material-ui/core/Card";
+import Paper from "@material-ui/core/Paper";
 
 import theme from "./Theme";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
+import Sheet from "./components/flex-sheet/Sheet";
 
 function App() {
 	const formCardStyle = { width: "700px", margin: "auto" };
@@ -30,10 +34,13 @@ function App() {
 								<Register />
 							</Paper>
 						</Route>
-						<Route path="/">
+						<Route path="/login">
 							<Paper style={formCardStyle}>
 								<Login />
 							</Paper>
+						</Route>
+						<Route path="/">
+							<Sheet></Sheet>
 						</Route>
 					</Switch>
 				</div>
