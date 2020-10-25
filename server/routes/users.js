@@ -26,6 +26,7 @@ router.route("/login").post(async (req, res) => {
 	//? Temporary tweak to password comparison as currently the database is storing raw passwords and not encrypted passwords
 
 	if (!(user && passwordCorrect)) {
+		console.log("Login failed - bad credentials");
 		return res.status(401).json({ error: "invalid username or password" }); //401 - unauthorized if username or password is incorrect
 	}
 
@@ -41,6 +42,7 @@ router.route("/login").post(async (req, res) => {
 	res
 		.status(200) //Successful request
 		.send({ token, username: user.username, name: user.name }); //The generated token and the username of the user are sent back in the response body
+	console.log("User was successfully logged in");
 });
 
 router.route("/:username").get((req, res) => {
