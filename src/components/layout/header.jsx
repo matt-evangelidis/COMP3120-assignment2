@@ -10,10 +10,7 @@ import Typography from "@material-ui/core/Typography";
 function Header(props) {
 	return (
 		<AppBar className="nav-bar" position="static">
-			<Toolbar style={{ paddingLeft: 0 }}>
-				{/* <IconButton onClick={() => setDrawerStatus(!drawerStatus)}>
-						<Icon>menu</Icon>
-					</IconButton> */}
+			<Toolbar>
 				<Typography variant="h6">Flex-Sheet</Typography>
 				<Button component={Link} to="/" style={{ margin: "auto" }}>
 					Characters
