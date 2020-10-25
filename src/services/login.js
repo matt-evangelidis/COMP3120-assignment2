@@ -1,10 +1,10 @@
-import axios from 'axios'
-const baseUrl = '/login'
+import axios from "axios";
+const url = "/api/users/login";
 
 // sending the HTTP post request to server address ‘/login’
-const login = async credentials => {
-    const response = await axios.post(baseUrl, credentials)
-    return response.data
-}
+const login = async (credentials) => {
+	const response = await axios.post(url, credentials);
+	return response.data;
+};
 
-export default { login }
+export default { login };
