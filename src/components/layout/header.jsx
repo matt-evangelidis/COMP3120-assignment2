@@ -16,7 +16,7 @@ function Header(props) {
 					Characters
 				</Button>
 				<Button component={Link} to="/login" style={{ marginRight: 0 }}>
-					Login
+					{props.user ? props.user.username : "Login"}
 				</Button>
 			</Toolbar>
 		</AppBar>

@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 
 import loginService from "../../services/login";
 
-function Login() {
+function Login(props) {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -27,7 +27,7 @@ function Login() {
 		loginService
 			.login({ username, password })
 			.then((res) => {
-				console.log("success");
+				props.setUserFn(res.data);
 			})
 			.catch((error) => {
 				console.log("there was an error");

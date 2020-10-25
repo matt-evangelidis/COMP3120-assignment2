@@ -26,16 +26,6 @@ function App() {
 	const formCardStyle = { width: "700px", margin: "auto" };
 	const [user, setUser] = useState(null); //Keep track of user login status
 
-	//handle logout
-	const logoutHandler = () => {
-		setUser(null);
-	};
-
-	//handle user login
-	const userLoginHandler = (user) => {
-		setUser(user);
-	};
-
 	return (
 		<ThemeProvider theme={theme}>
 			{/* Passes a 'theme' object down to children component which Material UI automatically integrates into its component styling */}
@@ -44,7 +34,7 @@ function App() {
 			{/*This eliminates visual discrepancies caused by differing default browser stylesheets */}
 			<Router>
 				<div className="App">
-					<Header />
+					<Header user={user} />
 					<div className="content">
 						<Switch>
 							<Route path="/register">
