@@ -6,6 +6,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
+import loginService from "../../services/login";
+
 function Login() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -13,6 +15,11 @@ function Login() {
 	const handlers = {
 		username: (value) => setUsername(value),
 		password: (value) => setPassword(value),
+	};
+
+	const submitHandler = async () => {
+		const response = await loginService.login({ username, password });
+		console.log(response);
 	};
 
 	return (
@@ -35,14 +42,25 @@ function Login() {
 				onChange={(e) => handlers.password(e.target.value)}
 				type="password"
 			/>
-			<Button variant="contained" disableElevation fullWidth color="primary">
+			<Button
+				variant="contained"
+				disableElevation
+				fullWidth
+				color="primary"
+				onClick={submitHandler}
+			>
 				Login
 			</Button>
-			<Link to="/register">
-				<Button variant="outlined" disableElevation fullWidth color="primary">
-					Register
-				</Button>
-			</Link>
+			<Button
+				variant="outlined"
+				disableElevation
+				fullWidth
+				color="primary"
+				component={Link}
+				to="/register"
+			>
+				Register
+			</Button>
 		</form>
 	);
 }
