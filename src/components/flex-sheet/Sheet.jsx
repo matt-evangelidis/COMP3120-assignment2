@@ -15,6 +15,14 @@ function Sheet(props) {
 	//     }
 	// }, []);
 
+	function Test() {
+		return (
+			<div key={4}>
+				<Note></Note>
+			</div>
+		);
+	}
+
 	return (
 		<GridLayout
 			cols={12}
@@ -32,8 +40,7 @@ function Sheet(props) {
 			<div key={3}>
 				<Note></Note>
 			</div>
-
-			{/* <Note key={1} /> */}
+			<Test></Test>
 		</GridLayout>
 
 		//? I trued moving the 'div' wrappers into the 'Note' component but that caused the resize handles to not show up for some reason

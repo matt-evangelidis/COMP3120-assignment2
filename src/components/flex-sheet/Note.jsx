@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import GridItem from "react-grid-layout";
-
 import Card from "@material-ui/core/Card";
 
 function Note(props) {
@@ -18,12 +16,16 @@ function Note(props) {
 		width: "100%",
 	};
 
-	return <Card style={style}>content</Card>;
+	return (
+		<Card style={style} {...props}>
+			content
+		</Card>
+	);
 
 	// return (
-	// 	<GridItem {...props}>
+	// 	<div key={props.key}>
 	// 		<Card style={style}>content</Card>
-	// 	</GridItem>
+	// 	</div>
 	// );
 }
 

@@ -18,8 +18,20 @@ function Login() {
 	};
 
 	const submitHandler = async () => {
-		const response = await loginService.login({ username, password });
-		console.log(response);
+		// const response = await loginService.login({ username, password });
+		// if (!response) {
+		// 	console.log("false response");
+		// } else {
+		// 	console.log("true response");
+		// }
+		loginService
+			.login({ username, password })
+			.then((res) => {
+				console.log("success");
+			})
+			.catch((error) => {
+				console.log("there was an error");
+			});
 	};
 
 	return (
