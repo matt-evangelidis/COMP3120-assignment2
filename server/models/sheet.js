@@ -10,7 +10,7 @@ const url = process.env.MONGODB_URI;
 util.mongooseConnect(url);
 
 const sheetSchema = new mongoose.Schema({
-  user:{type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  user:{type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
   name: {type: String, required: true},
   notes: [{type: mongoose.Schema.Types.ObjectId, ref: 'Note'}]
 });
