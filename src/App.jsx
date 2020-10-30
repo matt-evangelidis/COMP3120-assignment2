@@ -17,6 +17,8 @@ import Paper from "@material-ui/core/Paper";
 import theme from "./Theme";
 
 import Header from "./components/layout/header";
+import Footer from "./components/layout/footer"
+
 
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
@@ -53,6 +55,7 @@ function App() {
 						</Switch>
 					</div>
 				</div>
+				<Footer/>
 			</Router>
 		</ThemeProvider>
 	);
