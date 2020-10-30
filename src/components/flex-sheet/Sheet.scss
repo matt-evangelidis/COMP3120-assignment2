@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+
+.add-note-button {
+	position: fixed !important;
+	right: 16px;
+	top: $nav-bar-height + 16px;
+}

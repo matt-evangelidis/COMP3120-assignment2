@@ -1,7 +1,12 @@
+import "./Sheet.scss";
+
 import React, { useState } from "react";
 
 import GridLayout from "react-grid-layout";
-import Button from "@material-ui/core/Button";
+import Fab from "@material-ui/core/Fab";
+import Icon from "@material-ui/core/Icon";
+
+import { useTheme } from "@material-ui/core/styles";
 
 import Note from "./Note";
 
@@ -19,8 +24,7 @@ function Sheet(props) {
 	}
 
 	return (
-		<div>
-			<Button onClick={addNote}>Add note</Button>
+		<>
 			<GridLayout
 				cols={12}
 				rowHeight={30}
@@ -35,7 +39,10 @@ function Sheet(props) {
 					</div>
 				))}
 			</GridLayout>
-		</div>
+			<Fab onClick={addNote} color="primary" className="add-note-button">
+				<Icon>add</Icon>
+			</Fab>
+		</>
 
 		//? I trued moving the 'div' wrappers into the 'Note' component but that caused the resize handles to not show up for some reason
 	);

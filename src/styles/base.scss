@@ -6,12 +6,11 @@ a {
 }
 
 .App {
-	$nav-bar-height: 64px + 8 * 2;
-
 	min-height: 100vh;
 
 	.nav-bar {
 		height: $nav-bar-height;
+		position: fixed;
 
 		* {
 			color: white;
@@ -20,6 +19,8 @@ a {
 
 	.content {
 		min-height: calc(100vh - #{$nav-bar-height});
+		position: relative;
+		top: $nav-bar-height;
 		margin: auto;
 		display: flex;
 	}
