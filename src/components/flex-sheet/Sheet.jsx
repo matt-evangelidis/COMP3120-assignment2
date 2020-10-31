@@ -2,25 +2,36 @@ import "./Sheet.scss";
 
 import React, { useState } from "react";
 
-import GridLayout from "react-grid-layout";
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 
-import { useTheme } from "@material-ui/core/styles";
-
 import Note from "./Note";
+
+import GridLayout from "react-grid-layout";
 
 function Sheet(props) {
 	const [notes, setNotes] = useState([]);
 	const [noteSequencer, setNoteSequencer] = useState(0);
+	const [layout, setLayout] = useState([]);
+
+	const [width, setWidth] = useState(window.innerWidth);
+
+	React.useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth);
+			console.log("resized");
+		}
+		window.addEventListener("resize", handleResize);
+	});
 
 	function addNote() {
 		setNotes([...notes, noteSequencer]);
 		setNoteSequencer(noteSequencer + 1);
 	}
 
-	function handleLayoutChange(layout) {
-		console.log(layout);
+	function handleLayoutChange(newLayout) {
+		console.log(newLayout);
+		setLayout(newLayout);
 	}
 
 	return (
@@ -28,10 +39,10 @@ function Sheet(props) {
 			<GridLayout
 				cols={12}
 				rowHeight={30}
-				width={window.screen.width}
+				width={width}
 				verticalCompact={false}
-				resizeHandle={<div></div>}
 				onLayoutChange={handleLayoutChange}
+				preventCollision={true}
 			>
 				{notes.map((note) => (
 					<div key={note}>
