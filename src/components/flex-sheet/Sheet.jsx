@@ -10,8 +10,8 @@ import Note from "./Note";
 import GridLayout from "react-grid-layout";
 
 function Sheet(props) {
-	const [notes, setNotes] = useState([]);
-	const [noteSequencer, setNoteSequencer] = useState(0);
+	const [notes, setNotes] = useState([0]);
+	const [noteSequencer, setNoteSequencer] = useState(1);
 	const [layout, setLayout] = useState([]);
 
 	const [width, setWidth] = useState(window.innerWidth);
@@ -31,7 +31,25 @@ function Sheet(props) {
 
 	function handleLayoutChange(newLayout) {
 		console.log(newLayout);
+		newLayout[newLayout.length - 1].y = getNewY(newLayout);
 		setLayout(newLayout);
+	}
+
+	function getNewY(newLayout) {
+		const takenY = [];
+		var largestY = -1;
+		for (let item of newLayout) {
+			if (item.x === 0) {
+				takenY.push(item.y);
+				largestY = Math.max(largestY, item.y);
+			}
+		}
+		for (let i = 0; i <= largestY; i++) {
+			if (!takenY.includes(i)) {
+				return i;
+			}
+		}
+		return largestY;
 	}
 
 	return (
@@ -43,6 +61,7 @@ function Sheet(props) {
 				verticalCompact={false}
 				onLayoutChange={handleLayoutChange}
 				preventCollision={true}
+				layout={layout}
 			>
 				{notes.map((note) => (
 					<div key={note}>
