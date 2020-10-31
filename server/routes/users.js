@@ -45,13 +45,17 @@ router.route("/login").post(async (req, res) => {
 	console.log("User was successfully logged in");
 });
 
-router.route("/:username").get((req, res) => {
+router.route("/:username").get(async (req, res) => {
 	console.log("Received request to fetch user info");
 	const username = req.params.username;
+	const user = await User.find({username: username})
+	res.json(user);
 });
 
-router.route("/").get((req, res) => {
+router.route("/").get(async (req, res) => {
 	console.log("Received get request to root users api url");
+	const users = await User.find({});
+	res.json(users);
 });
 //
 module.exports = router;
