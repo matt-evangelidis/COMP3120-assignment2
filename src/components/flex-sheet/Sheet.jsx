@@ -31,7 +31,9 @@ function Sheet(props) {
 
 	function handleLayoutChange(newLayout) {
 		console.log(newLayout);
-		newLayout[newLayout.length - 1].y = getNewY(newLayout);
+		if (newLayout.length > layout.length) {
+			newLayout[newLayout.length - 1].y = getNewY(newLayout);
+		}
 		setLayout(newLayout);
 	}
 
