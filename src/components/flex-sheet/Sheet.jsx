@@ -24,11 +24,18 @@ function Sheet(props) {
 		window.addEventListener("resize", handleResize);
 	});
 
+	/**
+	 * Adds a note to the sheet
+	 */
 	function addNote() {
 		setNotes([...notes, noteSequencer]);
 		setNoteSequencer(noteSequencer + 1);
 	}
 
+	/**
+	 * Update the 'layout' state object when the sheet's layout is changed
+	 * @param {Object} newLayout - The new layout
+	 */
 	function handleLayoutChange(newLayout) {
 		console.log(newLayout);
 		if (newLayout.length > layout.length) {
@@ -37,6 +44,11 @@ function Sheet(props) {
 		setLayout(newLayout);
 	}
 
+	/**
+	 * Determines what the 'y' position of a newly added card should be
+	 * @param {Object} newLayout - The layout of the notes on the sheet
+	 * @returns {Number} The number that should be used for the latest note's 'y' coordinate
+	 */
 	function getNewY(newLayout) {
 		const takenY = [];
 		var largestY = -1;
