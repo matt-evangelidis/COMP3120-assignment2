@@ -38,47 +38,57 @@ function Login(props) {
 			});
 	};
 
-	return (
-		<form>
-			<Typography variant="h4" component="h1">
-				Login
-			</Typography>
-			<TextField
-				variant="outlined"
-				fullWidth
-				label="Username"
-				value={username}
-				onChange={(e) => handlers.username(e.target.value)}
-			/>
-			<TextField
-				variant="outlined"
-				fullWidth
-				label="Password"
-				value={password}
-				onChange={(e) => handlers.password(e.target.value)}
-				type="password"
-			/>
-			<Button
-				variant="contained"
-				disableElevation
-				fullWidth
-				color="primary"
-				onClick={submitHandler}
-			>
-				Login
-			</Button>
-			<Button
-				variant="outlined"
-				disableElevation
-				fullWidth
-				color="primary"
-				component={Link}
-				to="/register"
-			>
-				Register
-			</Button>
-		</form>
-	);
+	// #If user already login, when click on the username again it will show that this account is currently login as...
+	if(props.user){
+		console.log("user is login")
+		return (
+            <div className="row">
+                <p>Logged in as {props.user.username}</p>
+            </div>
+        )
+    } else {
+		return (
+			<form>
+				<Typography variant="h4" component="h1">
+					Login
+				</Typography>
+				<TextField
+					variant="outlined"
+					fullWidth
+					label="Username"
+					value={username}
+					onChange={(e) => handlers.username(e.target.value)}
+				/>
+				<TextField
+					variant="outlined"
+					fullWidth
+					label="Password"
+					value={password}
+					onChange={(e) => handlers.password(e.target.value)}
+					type="password"
+				/>
+				<Button
+					variant="contained"
+					disableElevation
+					fullWidth
+					color="primary"
+					onClick={submitHandler}
+				>
+					Login
+				</Button>
+				<Button
+					variant="outlined"
+					disableElevation
+					fullWidth
+					color="primary"
+					component={Link}
+					to="/register"
+				>
+					Register
+				</Button>
+			</form>
+		);
+	}
 }
 
 export default Login;
