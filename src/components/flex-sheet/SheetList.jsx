@@ -22,19 +22,33 @@ function SheetList(props) {
 		});
 	}
 
+	function Contents() {
+		const sheetLinks = [];
+		if (sheets.length) {
+			sheets.map((sheet, index) => {
+				sheetLinks.push(
+					<li>
+						<Link to={`/sheet/${sheet.id}`}>{sheet.name}</Link>
+					</li>
+				);
+			});
+			// return <>
+			//     {sheetLinks}
+			//     <Link to="/">Create new sheet</Link>
+			// </>
+		}
+		const body = sheetLinks.length ? sheetLinks : <h2>No Sheets</h2>;
+		return (
+			<>
+				{body}
+				<Link to="/">Create new sheet</Link>
+			</>
+		);
+	}
+
 	return (
 		<div className="sheets-list">
-			{sheets.length ? (
-				sheets.map((sheet, index) => {
-					return (
-						<li>
-							<Link to={`/sheet/${sheet.id}`}>{sheet.name}</Link>
-						</li>
-					);
-				})
-			) : (
-				<h2>No sheets</h2>
-			)}
+			<Contents />
 		</div>
 	);
 }
