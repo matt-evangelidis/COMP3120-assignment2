@@ -28,24 +28,26 @@ router.route("/").get(async (req, res) => {
 router.route("/").post(async (req, res) => {
 	console.log("received POST request to save a sheet");
 	//Request will contain user object that has user id and token
+
 	const user = req.body.user;
 	const sheet = req.body.sheet;
 
-	//TODO: Find user object with provided user id and validate with jwt token
+	//TODO: Authenticate user
 	const storedUser = await User.findOne({ username: user.username });
 
 	//TODO: Save sheet if authenticated
 	//# Save sheet
 	const noteIds = [];
-	for (let item of sheet) {
+	for (let item of sheet.notes) {
 		const newNote = new Note({ ...item, title: "test note title" });
 		noteIds.push(newNote._id);
 		await newNote.save();
 	}
+	//TODO: Check if sheet already exists
 
 	const newSheet = new Sheet({
 		user: storedUser._id,
-		name: "test sheet title",
+		name: sheet.name,
 		notes: noteIds,
 	});
 
@@ -74,6 +76,14 @@ router.route("/:id").get(async (req, res) => {
 	sheet.notes = await Note.find().where("_id").in(ids);
 
 	res.json(sheet);
+});
+
+router.route("/list/:username").get(async (req, res) => {
+	const username = req.params.username;
+
+	const storedUser = await User.findOne({ username });
+	const sheets = await Sheet.find({ _id: { $in: storedUser.sheets } });
+	res.status(200).json(sheets);
 });
 
 module.exports = router;
