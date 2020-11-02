@@ -2,14 +2,17 @@ import "./Sheet.scss";
 
 import React, { useState } from "react";
 
+import axios from "axios";
+
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 
-import Note from "./Note";
-
 import GridLayout from "react-grid-layout";
 
+import Note from "./Note";
+
 function Sheet(props) {
+	const user = props.user;
 	const [notes, setNotes] = useState([0]);
 	const [noteSequencer, setNoteSequencer] = useState(1);
 	const [layout, setLayout] = useState([]);
@@ -19,7 +22,6 @@ function Sheet(props) {
 	React.useEffect(() => {
 		function handleResize() {
 			setWidth(window.innerWidth);
-			console.log("resized");
 		}
 		window.addEventListener("resize", handleResize);
 	});
@@ -37,7 +39,6 @@ function Sheet(props) {
 	 * @param {Object} newLayout - The new layout
 	 */
 	function handleLayoutChange(newLayout) {
-		console.log(newLayout);
 		if (newLayout.length > layout.length) {
 			newLayout[newLayout.length - 1].y = getNewY(newLayout);
 		}
@@ -66,6 +67,27 @@ function Sheet(props) {
 		return largestY;
 	}
 
+	/**
+	 * Save sheet to database
+	 */
+	function saveSheet() {
+		axios
+			.post("/api/sheets", {
+				user: {
+					username: user.username,
+					token: user.token,
+				},
+				sheet: layout,
+			})
+			.then((result) => {
+				console.log(result);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}
+
+	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
 	return (
 		<>
 			<GridLayout
@@ -83,9 +105,14 @@ function Sheet(props) {
 					</div>
 				))}
 			</GridLayout>
-			<Fab onClick={addNote} color="primary" className="add-note-button">
-				<Icon>add</Icon>
-			</Fab>
+			<div id="sheet-action-buttons">
+				<Fab onClick={addNote} color="primary" className="add-note-button">
+					<Icon>add</Icon>
+				</Fab>
+				<Fab onClick={saveSheet} color="primary" className="add-note-button">
+					<Icon>save</Icon>
+				</Fab>
+			</div>
 		</>
 
 		//? I trued moving the 'div' wrappers into the 'Note' component but that caused the resize handles to not show up for some reason

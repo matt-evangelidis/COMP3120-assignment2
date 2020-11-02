@@ -17,8 +17,7 @@ import Paper from "@material-ui/core/Paper";
 import theme from "./Theme";
 
 import Header from "./components/layout/header";
-import Footer from "./components/layout/footer"
-
+import Footer from "./components/layout/footer";
 
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
@@ -50,12 +49,12 @@ function App() {
 								</Paper>
 							</Route>
 							<Route path="/">
-								<Sheet></Sheet>
+								<Sheet user={user}></Sheet>
 							</Route>
 						</Switch>
 					</div>
 				</div>
-				<Footer/>
+				<Footer />
 			</Router>
 		</ThemeProvider>
 	);
