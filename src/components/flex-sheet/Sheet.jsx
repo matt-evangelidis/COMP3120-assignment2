@@ -16,6 +16,7 @@ function Sheet(props) {
 	const [notes, setNotes] = useState([0]);
 	const [noteSequencer, setNoteSequencer] = useState(1);
 	const [layout, setLayout] = useState([]);
+	const [sheetName, setSheetName] = useState("");
 
 	const [width, setWidth] = useState(window.innerWidth);
 
@@ -77,7 +78,10 @@ function Sheet(props) {
 					username: user.username,
 					token: user.token,
 				},
-				sheet: layout,
+				sheet: {
+					name: sheetName,
+					notes: layout,
+				},
 			})
 			.then((result) => {
 				console.log(result);
@@ -89,7 +93,13 @@ function Sheet(props) {
 
 	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
 	return (
-		<>
+		<div className="sheet">
+			<span>Sheet Name</span>
+			<input
+				type="text"
+				value={sheetName}
+				onChange={(e) => setSheetName(e.target.value)}
+			></input>
 			<GridLayout
 				cols={12}
 				rowHeight={30}
@@ -113,7 +123,7 @@ function Sheet(props) {
 					<Icon>save</Icon>
 				</Fab>
 			</div>
-		</>
+		</div>
 
 		//? I trued moving the 'div' wrappers into the 'Note' component but that caused the resize handles to not show up for some reason
 	);
