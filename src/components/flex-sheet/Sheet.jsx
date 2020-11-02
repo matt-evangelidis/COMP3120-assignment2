@@ -27,10 +27,6 @@ function Sheet(props) {
 		right: theme.spacing(2),
 	};
 
-	const actionButtonStyle = {
-		marginRight: theme.spacing(1),
-	};
-
 	if (props.sheetId && !layout.length) {
 		axios.get(`/api/sheets/${props.sheetId}`).then((result) => {
 			const notePad = [];
@@ -140,26 +136,26 @@ function Sheet(props) {
 				))}
 			</GridLayout>
 			<div id="sheet-action-buttons" style={actionButtonWrapperStyle}>
-				<Fab
-					onClick={addNote}
-					color="primary"
-					className="add-note-button"
-					style={actionButtonStyle}
-				>
+				<SheetActionButton onClick={addNote}>
 					<Icon>add</Icon>
-				</Fab>
-				<Fab
-					onClick={saveSheet}
-					color="primary"
-					className="add-note-button"
-					style={actionButtonStyle}
-				>
-					<Icon>save</Icon>
-				</Fab>
+				</SheetActionButton>
+				{user && (
+					<SheetActionButton onClick={saveSheet}>
+						<Icon>save</Icon>
+					</SheetActionButton>
+				)}
 			</div>
 		</div>
+	);
+}
 
-		//? I trued moving the 'div' wrappers into the 'Note' component but that caused the resize handles to not show up for some reason
+function SheetActionButton(props) {
+	const theme = useTheme();
+	const style = { marginRight: theme.spacing(1) };
+	return (
+		<Fab {...props} color="primary" style={style}>
+			{props.children}
+		</Fab>
 	);
 }
 
