@@ -45,10 +45,12 @@ router.route("/login").post(async (req, res) => {
 	console.log("User was successfully logged in");
 });
 
+//TODO: User registration (with encrypted password storing)
+
 router.route("/:username").get(async (req, res) => {
 	console.log("Received request to fetch user info");
 	const username = req.params.username;
-	const user = await User.find({username: username})
+	const user = await User.find({ username: username });
 	res.json(user);
 });
 

@@ -1,7 +1,8 @@
 //#Router for handling all requets to '/api/sheets'
 
+const mongoose = require("mongoose");
 const router = require("express").Router();
-//const User = require("../models/user");
+const User = mongoose.model("User") || require("../models/user"); //? If I just use the standard require code it crashes
 const Sheet = require("../models/sheet");
 const Note = require("../models/note");
 const bcrypt = require("bcrypt");
@@ -31,10 +32,34 @@ router.route("/").post(async (req, res) => {
 	const sheet = req.body.sheet;
 
 	//TODO: Find user object with provided user id and validate with jwt token
+	const storedUser = await User.findOne({ username: user.username });
 
 	//TODO: Save sheet if authenticated
+	//# Save sheet
+	const noteIds = [];
+	for (let item of sheet) {
+		const newNote = new Note({ ...item, title: "test note title" });
+		noteIds.push(newNote._id);
+		await newNote.save();
+	}
+
+	const newSheet = new Sheet({
+		user: storedUser._id,
+		name: "test sheet title",
+		notes: noteIds,
+	});
+
+	storedUser.sheets = storedUser.sheets
+		? [...storedUser.sheets, newSheet._id]
+		: [newSheet._id];
+
+	await storedUser.save();
+	await newSheet.save();
+
+	//TODO: Just update sheet if it already exists
 
 	res.status(200).json({ user, sheet });
+	console.log("New sheet saved");
 });
 
 //#Get sheet by id
