@@ -1,7 +1,10 @@
 @import "../../styles/variables";
 
-.add-note-button {
+#sheet-action-buttons {
 	position: fixed !important;
 	right: 16px;
 	top: $nav-bar-height + 16px;
+	button {
+		margin-right: 8px;
+	}
 }
