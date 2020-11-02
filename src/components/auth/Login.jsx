@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -11,6 +11,7 @@ import loginService from "../../services/login";
 function Login(props) {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const history = useHistory();
 
 	const handlers = {
 		username: (value) => setUsername(value),
@@ -28,9 +29,12 @@ function Login(props) {
 			.login({ username, password })
 			.then((res) => {
 				props.setUserFn(res.data);
+				history.push("/") //# Redirecting to home page after login
+				console.log("Login successful")
 			})
 			.catch((error) => {
 				console.log("there was an error");
+				alert("Incorrect username or password! Please try again") //# Alert for any login error
 			});
 	};
 
