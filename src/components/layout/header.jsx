@@ -12,8 +12,8 @@ function Header(props) {
 		<AppBar className="nav-bar" position="static">
 			<Toolbar>
 				<Typography variant="h6">Flex-Sheet</Typography>
-				<Button component={Link} to="/" style={{ margin: "auto" }}>
-					Characters
+				<Button component={Link} to="/sheets" style={{ margin: "auto" }}>
+					Sheets
 				</Button>
 				<Button component={Link} to="/login" style={{ marginRight: 0 }}>
 					{props.user ? props.user.username : "Login"}

@@ -20,6 +20,19 @@ function Sheet(props) {
 
 	const [width, setWidth] = useState(window.innerWidth);
 
+	if (props.sheetId && !layout.length) {
+		axios.get(`/api/sheets/${props.sheetId}`).then((result) => {
+			const notePad = [];
+			for (let i = 0; i < result.data.notes.length; i++) {
+				notePad.push(i);
+			}
+			setNotes(notePad);
+			setNoteSequencer(notePad.length);
+			setLayout(result.data.notes);
+			setSheetName(result.data.name);
+		});
+	}
+
 	React.useEffect(() => {
 		function handleResize() {
 			setWidth(window.innerWidth);

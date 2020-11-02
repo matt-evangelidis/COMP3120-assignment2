@@ -22,6 +22,7 @@ import Footer from "./components/layout/footer";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Sheet from "./components/flex-sheet/Sheet";
+import SheetList from "./components/flex-sheet/SheetList";
 
 function App() {
 	const formCardStyle = { width: "700px", margin: "auto" };
@@ -48,6 +49,15 @@ function App() {
 									<Login user={user} setUserFn={setUser} />
 								</Paper>
 							</Route>
+							<Route path="/sheets">
+								<SheetList user={user}></SheetList>
+							</Route>
+							<Route
+								path="/sheet/:id"
+								render={(props) => (
+									<Sheet user={user} sheetId={props.match.params.id}></Sheet>
+								)}
+							></Route>
 							<Route path="/">
 								<Sheet user={user}></Sheet>
 							</Route>
