@@ -1,11 +1,10 @@
-import "./Sheet.scss";
-
 import React, { useState } from "react";
 
 import axios from "axios";
 
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
+import { useTheme } from "@material-ui/core/styles";
 
 import GridLayout from "react-grid-layout";
 
@@ -19,6 +18,18 @@ function Sheet(props) {
 	const [sheetName, setSheetName] = useState("");
 
 	const [width, setWidth] = useState(window.innerWidth);
+
+	const theme = useTheme();
+
+	const actionButtonWrapperStyle = {
+		position: "fixed",
+		top: theme.variables.navbarHeight + theme.spacing(2),
+		right: theme.spacing(2),
+	};
+
+	const actionButtonStyle = {
+		marginRight: theme.spacing(1),
+	};
 
 	if (props.sheetId && !layout.length) {
 		axios.get(`/api/sheets/${props.sheetId}`).then((result) => {
@@ -128,11 +139,21 @@ function Sheet(props) {
 					</div>
 				))}
 			</GridLayout>
-			<div id="sheet-action-buttons">
-				<Fab onClick={addNote} color="primary" className="add-note-button">
+			<div id="sheet-action-buttons" style={actionButtonWrapperStyle}>
+				<Fab
+					onClick={addNote}
+					color="primary"
+					className="add-note-button"
+					style={actionButtonStyle}
+				>
 					<Icon>add</Icon>
 				</Fab>
-				<Fab onClick={saveSheet} color="primary" className="add-note-button">
+				<Fab
+					onClick={saveSheet}
+					color="primary"
+					className="add-note-button"
+					style={actionButtonStyle}
+				>
 					<Icon>save</Icon>
 				</Fab>
 			</div>

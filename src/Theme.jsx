@@ -16,6 +16,9 @@ const theme = createMuiTheme({
 			primary: "#000000dd",
 		},
 	},
+	variables: {
+		navbarHeight: 82,
+	},
 });
 
 export default theme;
