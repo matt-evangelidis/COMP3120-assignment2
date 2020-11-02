@@ -20,18 +20,21 @@ router.route("/").get(async (req, res) => {
 /**
  * Takes a post request and saves provided sheet to database
  * @param {Object} user - User who is submitting the sheet
- * @param {number} user.id - The id of the submitting user
+ * @param {string} user.username - The username of the submitting user
  * @param {string} user.token - JWT Authentication token
  * @param {Object} sheet - The sheet the user is submitting
  */
 router.route("/").post(async (req, res) => {
+	console.log("received POST request to save a sheet");
 	//Request will contain user object that has user id and token
 	const user = req.body.user;
 	const sheet = req.body.sheet;
 
 	//TODO: Find user object with provided user id and validate with jwt token
 
-	//TODO:
+	//TODO: Save sheet if authenticated
+
+	res.status(200).json({ user, sheet });
 });
 
 //#Get sheet by id
