@@ -44,6 +44,7 @@ function Login(props) {
 		return (
             <div className="row">
                 <p>You are logged in as {props.user.username}</p>
+				<Link to = "/">Go Home</Link>
             </div>
         )
     } else {
