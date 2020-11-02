@@ -29,7 +29,7 @@ function Login(props) {
 			.login({ username, password })
 			.then((res) => {
 				props.setUserFn(res.data);
-				history.push("/") //# Redirecting to home page after login
+				history.push("/") //# Redirecting to home page after login using useHistory() function
 				console.log("Login successful")
 			})
 			.catch((error) => {
