@@ -24,6 +24,8 @@ import Register from "./components/auth/Register";
 import Sheet from "./components/flex-sheet/Sheet";
 import SheetList from "./components/flex-sheet/SheetList";
 
+import AuthenticatedRoute from "./components/auth/AuthenticatedRoute";
+
 function App() {
 	const formCardStyle = { width: "700px", margin: "auto" };
 	const [user, setUser] = useState(null); //Keep track of user login status
@@ -49,9 +51,9 @@ function App() {
 									<Login user={user} setUserFn={setUser} />
 								</Paper>
 							</Route>
-							<Route path="/sheets">
+							<AuthenticatedRoute user={user} path="/sheets">
 								<SheetList user={user}></SheetList>
-							</Route>
+							</AuthenticatedRoute>
 							<Route
 								path="/sheet/:id"
 								render={(props) => (
