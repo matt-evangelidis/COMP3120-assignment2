@@ -43,7 +43,7 @@ function Login(props) {
 		console.log("user is login")
 		return (
             <div className="row">
-                <p>Logged in as {props.user.username}</p>
+                <p>You are logged in as {props.user.username}</p>
             </div>
         )
     } else {
