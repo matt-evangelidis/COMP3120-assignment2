@@ -4,7 +4,7 @@ const uniqueValidator = require("mongoose-unique-validator");
 const util = require("./util");
 
 const url = process.env.MONGODB_URI;
-util.mongooseConnect(url);
+util.mongooseConnect(url, "User");
 
 const userSchema = new mongoose.Schema({
 	username: { type: String, required: true, unique: true },

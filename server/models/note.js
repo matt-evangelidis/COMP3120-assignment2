@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const util = require('./util');
 
 const url = process.env.MONGODB_URI;
-util.mongooseConnect(url);
+util.mongooseConnect(url, "Note");
 
 const noteSchema = new mongoose.Schema({
   //#content
