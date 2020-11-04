@@ -1,6 +1,6 @@
 # Overview
 
-<img src="flexsheet.mp4"/>
+![Flexsheet](flexsheet.mp4)
 
 
 ## Login
@@ -14,8 +14,7 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
-<img align="left" src="login.png"/>
-
+![Login Form](login.png)
 ## Register
 
 Regiser.png shows the registration page, where new users are able to create an account
@@ -28,8 +27,7 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
-<img align="right" src="register.png"/>
-
+![Register](register.png)
 
 ## Header
 
@@ -45,8 +43,7 @@ The login button has been replace with a User button, showing which user is curr
 
 Additionally, a SHEETS button has been added in the middle of the header, which allows the user to be redirected to the sheets page.
 
-<img src="Header.png"/>
-
+![Header/navbar](Header.png)
 
 ## Lougout
 
@@ -56,6 +53,7 @@ It shows which user is logged in as well as giving the user the option to logout
 
 <img align="right" src="logout.png"/>
 
+![Logout](logout.png)
 
 ## Footer
 
