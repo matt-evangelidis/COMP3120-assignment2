@@ -20,28 +20,28 @@ router.post("/login", (req, res) => {
 
 	//Find user by username
 	User.findOne({ username }).then(user => {
-	  //Check if user exists
-	  if (!user) {
-		return res.status(404).json({ Username: "username not found" });
-	  }
-	
-	const userForToken = {
-		username: user.username,
-		id: user._id,
-	};
+		//Check if user exists
+		if (!user) {
+			return res.status(404).json({ Username: "username not found" });
+		}
 		
-	//# If username and password are correct, a token is created, which contains username, user id in a
-	//# digitally signed form; it is signed using a string from the environment variable SECRET as the secret
-	const token = jwt.sign(userForToken, process.env.SECRET);
-		
-	res
-		.status(200) //*Successful request
-		.send({ token, username: user.username, name: user.name }); //*The generated token and the username of the user are sent back in the response body
+		const userForToken = {
+			username: user.username,
+			id: user._id,
+		};
+			
+		//# If username and password are correct, a token is created, which contains username, user id in a
+		//# digitally signed form; it is signed using a string from the environment variable SECRET as the secret
+		const token = jwt.sign(userForToken, process.env.SECRET);
+			
+		res
+			.status(200) //*Successful request
+			.send({ token, username: user.username, name: user.name }); //*The generated token and the username of the user are sent back in the response body
 
-	if (!password) {
-		console.log("Login failed - bad credentials");
-		return res.status(400).json({ error: "invalid password" }); //*400 - unauthorized if password is incorrect
-	} 
+		if (!password) {
+			console.log("Login failed - bad credentials");
+			return res.status(400).json({ error: "invalid password" }); //*400 - unauthorized if password is incorrect
+		} 
 	});
  });
 
