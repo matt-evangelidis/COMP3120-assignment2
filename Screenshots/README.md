@@ -1,6 +1,7 @@
-The Read Me file explaining the Screenshots of this React Application.
+# Overview
 
--------------------- LOGIN ---------------------------------
+
+## Login
 
 Login.png shows the login screen for out application.
 
@@ -13,7 +14,7 @@ The Register button takes you to Register.png.
 
 <img src="login.png"/>
 
--------------------- Register ---------------------------------
+## Register
 
 Regiser.png shows the registration page, where new users are able to create an account
 
@@ -28,7 +29,7 @@ It includes three input fields:
 <img src="register.png"/>
 
 
--------------------- Header ---------------------------------
+## Header
 
 Header.png is the navigation bar of the application.
 
@@ -45,7 +46,7 @@ Additionally, a SHEETS button has been added in the middle of the header, which 
 <img src="Header.png"/>
 
 
--------------------- Logout ---------------------------------
+## Lougout
 
 Lougout.png illustrates how the logout is displayed for the user.
 
@@ -54,7 +55,7 @@ It shows which user is logged in as well as giving the user the option to logout
 <img src="logout.png"/>
 
 
--------------------- Footer ---------------------------------
+## Footer
 
 The Footer is displayed on all pages.
 It displays every member of the team as well as the title of the application.
@@ -62,7 +63,7 @@ It displays every member of the team as well as the title of the application.
 <img src="Footer.png"/>
 
 
--------------------- Notes ---------------------------------
+## Notes
 
 Notes.png displays the currently display sheet and its contents.
 
@@ -79,8 +80,7 @@ On the right hand side, at the top right we can see two blue buttons:
 <img src="notes.png"/>
 
 
--------------------- Sheets ---------------------------------
-
+## Sheets
 Sheets.png shows the sheets page where the user is able to pick a sheet to open it and see its saved Notes(contents)
 
 Each user has their own list of saved sheets, which are saved to MongoDB. Whenever the user saves a sheet it will be added to the list 
@@ -91,9 +91,11 @@ Under all the sheets is a link to create another sheet.
 <img src="sheets.png"/>
 
 
-----------------------------------------------------------
-
-
+Brought to you buy Team X:
+# Thomas Clark
+# Matthew Evangelidis
+# Suphichaya Chaochuangchot
+# Justin Erasmus
 
 
 
