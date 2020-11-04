@@ -1,5 +1,7 @@
 # Overview
 
+<img src="flexsheet.mp4"/>
+
 
 ## Login
 
@@ -10,7 +12,7 @@ The form includes two buttons:
 1. Login
 The login button redirects the user to the Home page of the user. Which has all their saved Notes and Sheets.
 2. Register
-The Register button takes you to Register.png.
+The Register button takes you to Register form.
 
 <img src="login.png"/>
 
@@ -78,6 +80,10 @@ On the right hand side, at the top right we can see two blue buttons:
 2. Save (floppydisk): When pressed, saves the current sheet.
 
 <img src="notes.png"/>
+
+Each Note includes a text editor that allows for a broad variety of rich text composition experiences, allowing the users both basic text styles all the way to embedded media.
+
+We used [Draft.js](https://draftjs.org/) for the text editor
 
 
 ## Sheets
