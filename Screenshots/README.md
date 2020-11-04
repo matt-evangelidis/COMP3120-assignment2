@@ -11,6 +11,8 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register.png.
 
+<img src="login.png" />
+
 -------------------- Register ---------------------------------
 
 Regiser.png shows the registration page, where new users are able to create an account
