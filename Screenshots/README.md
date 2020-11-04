@@ -11,7 +11,7 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register.png.
 
-<img src="login.png" />
+<img src="login.png"/>
 
 -------------------- Register ---------------------------------
 
@@ -24,6 +24,9 @@ It includes three input fields:
 - Password: Where the user inputs their chosen password
 
 - Repeat Password: Where the user repeats their password
+
+<img src="register.png"/>
+
 
 -------------------- Header ---------------------------------
 
@@ -39,16 +42,25 @@ The login button has been replace with a User button, showing which user is curr
 
 Additionally, a SHEETS button has been added in the middle of the header, which allows the user to be redirected to the sheets page.
 
+<img src="Header.png"/>
+
+
 -------------------- Logout ---------------------------------
 
 Lougout.png illustrates how the logout is displayed for the user.
 
 It shows which user is logged in as well as giving the user the option to logout or return to the home page.
 
+<img src="logout.png"/>
+
+
 -------------------- Footer ---------------------------------
 
 The Footer is displayed on all pages.
 It displays every member of the team as well as the title of the application.
+
+<img src="Footer.png"/>
+
 
 -------------------- Notes ---------------------------------
 
@@ -64,6 +76,8 @@ On the right hand side, at the top right we can see two blue buttons:
 1. plus (+): When pressed, new notes are created for the user within the current sheet
 2. Save (floppydisk): When pressed, saves the current sheet.
 
+<img src="notes.png"/>
+
 
 -------------------- Sheets ---------------------------------
 
@@ -74,8 +88,10 @@ on the top left. Each sheet when clicked directs the user into the sheet.
 
 Under all the sheets is a link to create another sheet.
 
+<img src="sheets.png"/>
 
 
+----------------------------------------------------------
 
 
 
