@@ -1,4 +1,5 @@
 const Validator = require('validator')
+const isEmpty = require("is-empty");
 
 module.exports = function (data) {
     let errors = {}
@@ -13,7 +14,7 @@ module.exports = function (data) {
 
     return {
         errors,
-        isValid: Object.keys(errors).length === 0
+        isValid: isEmpty(errors)
     }
 }
 
