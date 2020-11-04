@@ -17,10 +17,18 @@ of awkward and buggy text display issues.
 
 ## Reference
 ## Milestones
-|Week 9 | Project Proposal: |
-|Week 10| Data |
-|Week 11| Cards: |
-|Week 12| Card Text: |
+| Weeks  | Milestones |
+| ------------- | ------------- |
+| Week 9   | Content Cell  |
+| Week 10  | **Data Storage**: A MongoDB Atlas project has been initialised and is connected to
+            the application. Data models for most entities have been written.    
+            **Authentication**: A rudimentary authentication system consisting of user login,
+            including backend and frontend implementation.  |
+| Week 11  | **Cards**: The Card/Grid system has been implemented, allowing users to create new
+            cards, drag them to move them around the grid as well as resize them. Card text
+            content is not yet implemented.  |
+| Week 12  | **Card Text**: Text content of cards is implemented with a rich text editor.
+  |
 ## Project Source Code Guide
 ## Summary of Next Steps
 
