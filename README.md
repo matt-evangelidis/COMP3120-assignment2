@@ -17,6 +17,7 @@ while form fillable pdfs offer some degree of flexibility, they also had their o
 of awkward and buggy text display issues.
 
 ## Reference
+A reference to your second Github repository if you used one
 
 ## Milestones
 
@@ -33,9 +34,10 @@ The project is split into two sections:
 2. Back (server)
 
 ### Front-End (src)
-<img align="left" src="./Screenshots/formulas.png" />
+<img align="left" src="./Screenshots/src.png" />
 
 The src folder contains all the files and code for the frontend section of the project.
+
 
 | Folders | Role |
 | ------------- | ------------- |

@@ -14,7 +14,7 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
-<img src="login.png"/>
+<img align="left" src="login.png"/>
 
 ## Register
 
@@ -28,7 +28,7 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
-<img src="register.png"/>
+<img align="right" src="register.png"/>
 
 
 ## Header
@@ -54,7 +54,7 @@ Lougout.png illustrates how the logout is displayed for the user.
 
 It shows which user is logged in as well as giving the user the option to logout or return to the home page.
 
-<img src="logout.png"/>
+<img align="right" src="logout.png"/>
 
 
 ## Footer
@@ -94,7 +94,7 @@ on the top left. Each sheet when clicked directs the user into the sheet.
 
 Under all the sheets is a link to create another sheet.
 
-<img src="sheets.png"/>
+<img align="left" src="sheets.png"/>
 
 
 Brought to you buy Team X:
