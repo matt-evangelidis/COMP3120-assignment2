@@ -40,7 +40,7 @@ function Login(props) {
 
 	const logout = (event) => {
         event.preventDefault()
-        setUsername(null)
+        window.location.href = "/login"
     }
 
 	// #If user already login, when click on the username again it will show that this account is currently login as...
