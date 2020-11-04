@@ -1,6 +1,6 @@
 # Overview
 
-![Flexsheet](flexsheet.mp4)
+![Flexsheet](https://media.giphy.com/media/LZmF7wsbGJISHRylUx/giphy.gif)
 
 
 ## Login
@@ -51,7 +51,6 @@ Lougout.png illustrates how the logout is displayed for the user.
 
 It shows which user is logged in as well as giving the user the option to logout or return to the home page.
 
-<img align="right" src="logout.png"/>
 
 ![Logout](logout.png)
 
@@ -60,8 +59,7 @@ It shows which user is logged in as well as giving the user the option to logout
 The Footer is displayed on all pages.
 It displays every member of the team as well as the title of the application.
 
-<img src="Footer.png"/>
-
+![Footer](Footer.png)
 
 ## Notes
 
@@ -77,7 +75,7 @@ On the right hand side, at the top right we can see two blue buttons:
 1. plus (+): When pressed, new notes are created for the user within the current sheet
 2. Save (floppydisk): When pressed, saves the current sheet.
 
-<img src="notes.png"/>
+![Notes](notes.png)
 
 Each Note includes a text editor that allows for a broad variety of rich text composition experiences, allowing the users both basic text styles all the way to embedded media.
 
@@ -92,14 +90,13 @@ on the top left. Each sheet when clicked directs the user into the sheet.
 
 Under all the sheets is a link to create another sheet.
 
-<img align="left" src="sheets.png"/>
-
+![Sheets](sheets.png)
 
 Brought to you buy Team X:
-### Thomas Clark
-### Matthew Evangelidis
-### Suphichaya Chaochuangchot
-### Justin Erasmus
+### - Thomas Clark
+### - Matthew Evangelidis
+### - Suphichaya Chaochuangchot
+### - Justin Erasmus
 
 
 

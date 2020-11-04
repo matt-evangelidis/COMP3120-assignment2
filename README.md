@@ -34,7 +34,7 @@ The project is split into two sections:
 2. Back (server)
 
 ### Front-End (src)
-<img align="left" src="./Screenshots/src.png" />
+![Frontend folders](/Screenshots/src.png)
 
 The src folder contains all the files and code for the frontend section of the project.
 
@@ -53,7 +53,8 @@ The src folder contains all the files and code for the frontend section of the p
 
 
 ### Back-End (server)
-<img align="left" src="./Screenshots/backendfiles.png" />
+![Backend Folders](/Screenshots/backendfiles.png)
+
 The server folder contains all the files and code for the backend section of the project.
 
 | Folders | Role |
@@ -71,7 +72,7 @@ The next stage of this project would be to include formulas: Formulas in Flex Sh
 
 Below is an example of how formulas could work.
 
-<img src="./Screenshots/formulas.png"/>
+![Formulas](/Screenshots/formulas.png)
 
 ## Main Roles
 
