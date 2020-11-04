@@ -31,14 +31,20 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"test": "jest --verbose --runInBand",
 		"eject": "react-scripts eject",
 		"server": "node server/server.js",
 		"dev-server": "nodemon server/server.js",
 		"mongoUser": "node server/models/userTest.js"
 	},
 	"eslintConfig": {
-		"extends": "react-app"
+		"extends": "react-app",
+		"env": {
+			"jest": true
+		}
+	},
+	"jest": {
+		"testEnvironment": "node"
 	},
 	"browserslist": {
 		"production": [
@@ -55,6 +61,7 @@
 	"proxy": "http://localhost:3001/",
 	"devDependencies": {
 		"cross-env": "^7.0.2",
+		"jest": "^26.6.2",
 		"supertest": "^6.0.0"
 	}
 }
