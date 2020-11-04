@@ -92,10 +92,10 @@ Under all the sheets is a link to create another sheet.
 
 
 Brought to you buy Team X:
-# Thomas Clark
-# Matthew Evangelidis
-# Suphichaya Chaochuangchot
-# Justin Erasmus
+### Thomas Clark
+### Matthew Evangelidis
+### Suphichaya Chaochuangchot
+### Justin Erasmus
 
 
 
