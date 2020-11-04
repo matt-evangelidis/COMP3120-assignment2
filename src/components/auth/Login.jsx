@@ -34,18 +34,41 @@ function Login(props) {
 			})
 			.catch((error) => {
 				console.log("there was an error");
-				alert("Incorrect username or password! Please try again") //# Alert for any login error
+				//alert("Incorrect username or password! Please try again") //# Alert for any login error
 			});
 	};
+
+	const logout = (event) => {
+        event.preventDefault()
+        setUsername(null)
+    }
 
 	// #If user already login, when click on the username again it will show that this account is currently login as...
 	if(props.user){
 		console.log("user is login")
 		return (
-            <div className="row">
+            <form>
                 <p>You are logged in as {props.user.username}</p>
-				<Link to = "/">Go Home</Link>
-            </div>
+				<Button
+					variant="contained"
+					disableElevation
+					fullWidth
+					color="primary"
+					onClick={logout}
+				>
+					Logout
+				</Button>
+				<Button
+					variant="outlined"
+					disableElevation
+					fullWidth
+					color="primary"
+					component={Link}
+					to="/"
+				>
+					Home
+				</Button>
+            </form>
         )
     } else {
 		return (
