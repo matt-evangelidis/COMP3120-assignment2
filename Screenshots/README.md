@@ -27,9 +27,13 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
-![Register](register.png)
+<!-- ![Register](register.png) -->
+<img align="right" height="200" src="register.png">
+
 
 ## Header
+
+![Header/navbar](Header.png)
 
 Header.png is the navigation bar of the application.
 
@@ -43,7 +47,6 @@ The login button has been replace with a User button, showing which user is curr
 
 Additionally, a SHEETS button has been added in the middle of the header, which allows the user to be redirected to the sheets page.
 
-![Header/navbar](Header.png)
 
 ## Lougout
 
@@ -59,7 +62,9 @@ It shows which user is logged in as well as giving the user the option to logout
 The Footer is displayed on all pages.
 It displays every member of the team as well as the title of the application.
 
-![Footer](Footer.png)
+<!-- ![Footer](Footer.png) -->
+<img align="left" height="200" src="Footer.png">
+
 
 ## Notes
 
@@ -90,9 +95,11 @@ on the top left. Each sheet when clicked directs the user into the sheet.
 
 Under all the sheets is a link to create another sheet.
 
-![Sheets](sheets.png)
+<!-- ![Sheets](sheets.png) -->
+<img align="left" height="200" src="sheets.png">
 
-Brought to you buy Team X:
+
+## Brought to you buy Team X:
 ### - Thomas Clark
 ### - Matthew Evangelidis
 ### - Suphichaya Chaochuangchot
