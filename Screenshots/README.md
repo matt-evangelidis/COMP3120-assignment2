@@ -17,6 +17,8 @@ The Register button takes you to Register form.
 ![Login Form](login.png)
 ## Register
 
+<img align="right" height="200" src="register.png">
+
 Regiser.png shows the registration page, where new users are able to create an account
 
 It includes three input fields:
@@ -28,7 +30,6 @@ It includes three input fields:
 - Repeat Password: Where the user repeats their password
 
 <!-- ![Register](register.png) -->
-<img align="right" height="200" src="register.png">
 
 
 ## Header
@@ -88,6 +89,9 @@ We used [Draft.js](https://draftjs.org/) for the text editor
 
 
 ## Sheets
+
+<img align="left" height="200" src="sheets.png">
+
 Sheets.png shows the sheets page where the user is able to pick a sheet to open it and see its saved Notes(contents)
 
 Each user has their own list of saved sheets, which are saved to MongoDB. Whenever the user saves a sheet it will be added to the list 
@@ -96,7 +100,6 @@ on the top left. Each sheet when clicked directs the user into the sheet.
 Under all the sheets is a link to create another sheet.
 
 <!-- ![Sheets](sheets.png) -->
-<img align="left" height="200" src="sheets.png">
 
 
 ## Brought to you buy Team X:
