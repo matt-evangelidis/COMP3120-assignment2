@@ -1,4 +1,6 @@
 # Flex-Sheet
+
+
 ## Outline
 Flex Sheet is designed as a tabletop rpg digital character sheet solution. The core concept of
 flex sheets is cards. Cards are created by the user and are given a title and some body text.
@@ -54,7 +56,9 @@ The src folder contains all the files and code for the frontend section of the p
 
 
 ### Back-End (server)
-![Backend Folders](/Screenshots/backendfiles.png)
+<!-- ![Backend Folders](/Screenshots/backendfiles.png) -->
+<img align="right" height="200" src="/Screenshots/backendfiles.png">
+
 
 The server folder contains all the files and code for the backend section of the project.
 
