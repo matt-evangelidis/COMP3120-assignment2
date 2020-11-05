@@ -83,8 +83,8 @@ Below is an example of how formulas could work.
 
 | Role  | Assigned User |
 | ------------- | ------------- |
-| Frontend  | Suphichaya Chaochuangchot  |
-| Backend  | Thomas Clark  |
+| Backend  | Suphichaya Chaochuangchot  |
+| Frontend  | Thomas Clark  |
 | Database  | Matthew Evangelidis  |
 | Backend  | Justin Erasmus  |
 
