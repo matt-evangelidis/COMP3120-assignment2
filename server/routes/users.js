@@ -7,22 +7,42 @@ const jwt = require("jsonwebtoken");
 const validateLoginInput = require("../validation/login");
 // const validateRegisterInput = require('../validation/register')
 
+// # Login endpoint
 router.post("/login", (req, res) => {
-	// Form validation
+	// # Form validation
 	const { errors, isValid } = validateLoginInput(req.body);
 
-	// Check validation
+	// # Check validation
 	if (!isValid) {
 	  return res.status(400).json(errors);
 	}
 	const username = req.body.username;
 	const password = req.body.password;
 
-	//Find user by username
+	// # Find user by username
 	User.findOne({ username }).then(user => {
-		//Check if user exists
+
+		// # Check if user exists
 		if (!user) {
 			return res.status(404).json({ Username: "username not found" });
+		}
+
+		// # comparing password and check if its correct
+		// const passwordCorrect =	
+			// 	user === null	
+			// 		? false	
+			// 		: await bcrypt.compare(password, user.passwordHash);	
+			//Check the password attached in req
+
+		//? Temporary tweak to password comparison as currently the database is storing raw passwords and not encrypted passwords
+		const passwordCorrect =	
+			user === null 
+				? false 
+				: password === user.password;
+
+		if (!passwordCorrect) {
+			console.log("Login failed - bad credentials");
+			return res.status(400).json({ error: "invalid password" }); // * Return 400 Error - if password is incorrect
 		}
 		
 		const userForToken = {
@@ -35,13 +55,8 @@ router.post("/login", (req, res) => {
 		const token = jwt.sign(userForToken, process.env.SECRET);
 			
 		res
-			.status(200) //*Successful request
-			.send({ token, username: user.username, name: user.name }); //*The generated token and the username of the user are sent back in the response body
-
-		if (!password) {
-			console.log("Login failed - bad credentials");
-			return res.status(400).json({ error: "invalid password" }); //*400 - unauthorized if password is incorrect
-		} 
+			.status(200) // * Successful request
+			.send({ token, username: user.username, name: user.name }); // * The generated token and the username of the user are sent back in the response body
 	});
  });
 
