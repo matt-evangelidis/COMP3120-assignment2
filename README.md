@@ -34,8 +34,8 @@ The project is split into two sections:
 2. Back (server)
 
 ### Front-End (src)
-![Frontend folders](/Screenshots/src.png)
-<img align="left" width="100" height="100" src="/Screenshots/src.png">
+<!-- ![Frontend folders](/Screenshots/src.png) -->
+<img align="left" height="200" src="/Screenshots/src.png">
 
 The src folder contains all the files and code for the frontend section of the project.
 
