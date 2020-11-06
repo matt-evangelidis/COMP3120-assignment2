@@ -5,9 +5,9 @@ import {
 	EditorState,
 	ContentState,
 	convertFromHTML,
-	convertFromRaw,
+	RichUtils,
 } from "draft-js";
-import { stateToMarkdown } from "draft-js-export-markdown";
+import { stateToHTML } from "draft-js-export-html";
 import "draft-js/dist/Draft.css";
 
 function TextEditor(props) {
@@ -24,17 +24,25 @@ function TextEditor(props) {
 
 	function save(e) {
 		setEditorState(e);
-		props.save(stateToMarkdown(e.getCurrentContent()));
+		props.save(stateToHTML(e.getCurrentContent()));
 	}
 
-	// useEffect(() => {
-	// 	console.log(props.editingNote);
-	// 	// props.editingNote.content
-	// 	const blocks = convertFromHTML(`<p>default</p>`);
-	// 	setEditorState(state);
-	// }, []);
+	function handleKeyCommand(command) {
+		const newState = RichUtils.handleKeyCommand(editorState, command);
+		if (newState) {
+			setEditorState(newState);
+			return "handled";
+		}
+		return "not-handled";
+	}
 
-	return <Editor editorState={editorState} onChange={save} />;
+	return (
+		<Editor
+			editorState={editorState}
+			onChange={save}
+			handleKeyCommand={handleKeyCommand}
+		/>
+	);
 }
 
 export default TextEditor;

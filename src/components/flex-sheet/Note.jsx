@@ -1,3 +1,5 @@
+import "./Note.scss";
+
 import React, { useState, useEffect } from "react";
 
 import Card from "@material-ui/core/Card";
@@ -13,7 +15,12 @@ function Note(props) {
 	}
 
 	return (
-		<Card style={style} {...props} onDoubleClick={onDoubleClick}>
+		<Card
+			style={style}
+			{...props}
+			onDoubleClick={onDoubleClick}
+			className="flex-sheet-note"
+		>
 			{props.children}
 		</Card>
 	);

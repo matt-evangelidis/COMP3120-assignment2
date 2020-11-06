@@ -11,6 +11,8 @@ import { useTheme } from "@material-ui/core/styles";
 
 import GridLayout from "react-grid-layout";
 
+import parseHTML from "html-react-parser";
+
 import Note from "./Note";
 import TextEditor from "./TextEditor";
 
@@ -160,7 +162,7 @@ function Sheet(props) {
 				{notes.map((note) => (
 					<div key={note}>
 						<Note setEditingSheet={setEditingNote} data={layout[note]}>
-							{layout[note]?.content || "default"}
+							{parseHTML(layout[note]?.content || "default")}
 						</Note>
 					</div>
 				))}
