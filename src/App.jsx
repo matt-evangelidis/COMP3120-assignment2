@@ -67,6 +67,7 @@ function App() {
 					</div>
 				</div>
 				<Footer />
+				{/* TODO: Account for footer height so it doesnt force the scrollbar on the screen */}
 			</Router>
 		</ThemeProvider>
 	);
