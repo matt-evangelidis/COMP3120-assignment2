@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 import Typography from "@material-ui/core/Typography";
+
 
 import loginService from "../../services/login";
 
@@ -34,14 +36,14 @@ function Login(props) {
 			})
 			.catch((error) => {
 				console.log("there was an error");
-				//alert("Incorrect username or password! Please try again") //# Alert for any login error
+				alert("Incorrect username or password! Please try again") //# Alert for any login error
 			});
 	};
 
 	const logout = (event) => {
         event.preventDefault()
         window.location.href = "/login"
-    }
+	}
 
 	// #If user already login, when click on the username again it will show that this account is currently login as...
 	if(props.user){
@@ -72,47 +74,53 @@ function Login(props) {
         )
     } else {
 		return (
-			<form>
-				<Typography variant="h4" component="h1">
-					Login
-				</Typography>
-				<TextField
-					variant="outlined"
-					fullWidth
-					label="Username"
-					value={username}
-					onChange={(e) => handlers.username(e.target.value)}
-				/>
-				<TextField
-					variant="outlined"
-					fullWidth
-					label="Password"
-					value={password}
-					onChange={(e) => handlers.password(e.target.value)}
-					type="password"
-				/>
-				<Button
-					variant="contained"
-					disableElevation
-					fullWidth
-					color="primary"
-					onClick={submitHandler}
-				>
-					Login
-				</Button>
-				<Button
-					variant="outlined"
-					disableElevation
-					fullWidth
-					color="primary"
-					component={Link}
-					to="/register"
-				>
-					Register
-				</Button>
-			</form>
+			<ValidatorForm
+				onSubmit={submitHandler}
+			>
+			<h2>Login</h2>
+			<TextValidator
+				variant="outlined"
+				fullWidth
+				label="Username"
+				onChange={(e) => handlers.username(e.target.value)}
+				name="username"
+				value={username}
+				validators={['required']}
+				errorMessages={['This field is required']}
+			/>
+			<TextValidator
+				variant="outlined"
+				fullWidth
+				label="Password"
+				onChange={(e) => handlers.password(e.target.value)}
+				name="password"
+				type="password"
+				value={password}
+				validators={['required']}
+				errorMessages={['This field is required']}
+			/>
+			<Button
+				variant="contained"
+				fullWidth
+				color="primary"
+				type="submit"
+			>
+				Login
+			</Button>
+			<Button
+				variant="outlined"
+				disableElevation
+				fullWidth
+				color="primary"
+				component={Link}
+				to="/register"
+			>
+				Register
+			</Button>
+			</ValidatorForm>
 		);
 	}
+	
 }
 
 export default Login;
