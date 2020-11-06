@@ -11,7 +11,7 @@ function Note(props) {
 	};
 
 	function onDoubleClick() {
-		props.setEditingSheet(props.data);
+		props.setEditingNote(props.data);
 	}
 
 	return (

@@ -56,10 +56,6 @@ function Sheet(props) {
 		window.addEventListener("resize", handleResize);
 	}, []);
 
-	React.useEffect(() => {
-		console.log(layout);
-	});
-
 	/**
 	 * Adds a note to the sheet
 	 */
@@ -73,7 +69,6 @@ function Sheet(props) {
 	 * @param {Object} newLayout - The new layout
 	 */
 	function handleLayoutChange(newLayout) {
-		console.log("new layout: ", newLayout);
 		if (newLayout.length > layout.length) {
 			newLayout[newLayout.length - 1].y = getNewY(newLayout);
 		}
@@ -135,12 +130,6 @@ function Sheet(props) {
 		setLayout(newLayout);
 	}
 
-	const editorCardStyle = {
-		width: "700px",
-		maxWidth: "95vw",
-		minHeight: "400px",
-	};
-
 	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
 	return (
 		<div className="sheet">
@@ -161,7 +150,7 @@ function Sheet(props) {
 			>
 				{notes.map((note) => (
 					<div key={note}>
-						<Note setEditingSheet={setEditingNote} data={layout[note]}>
+						<Note setEditingNote={setEditingNote} data={layout[note]}>
 							{parseHTML(layout[note]?.content || "default")}
 						</Note>
 					</div>
@@ -178,14 +167,13 @@ function Sheet(props) {
 				)}
 			</div>
 			<Modal open={editingNote ? true : false}>
-				<ClickAwayListener onClickAway={() => setEditingNote(null)}>
-					<Card className="text-editor-card" style={editorCardStyle}>
-						<TextEditor
-							save={saveNoteText}
-							editingNote={editingNote}
-						></TextEditor>
-					</Card>
-				</ClickAwayListener>
+				<Card className="text-editor-card">
+					<TextEditor
+						save={saveNoteText}
+						editingNote={editingNote}
+						close={() => setEditingNote(null)}
+					></TextEditor>
+				</Card>
 			</Modal>
 		</div>
 	);

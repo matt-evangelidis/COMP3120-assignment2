@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.text-editor-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	min-height: 400px;
+	width: 700px;
+	max-width: 95vw;
+
+	.controls {
+		button {
+			@include horizontal-margin($spacing-1 / 2, false);
+		}
+
+		&.top-controls {
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: $spacing-1;
+		}
+
+		&.bottom-controls {
+			padding-top: $spacing-1;
+			border-top: 1px solid lightgrey;
+		}
+	}
+
+	.DraftEditor-root {
+		flex-grow: 1;
+		padding: $spacing-3 $spacing-1;
+		font-size: 16px;
+	}
+}

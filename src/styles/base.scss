@@ -29,10 +29,18 @@ a {
 .MuiPaper-root,
 .MuiCard-root {
 	padding: 8px;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 [role="presentation"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.MuiButton-text {
+	padding: 6px 16px !important;
 }
