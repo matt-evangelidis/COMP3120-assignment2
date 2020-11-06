@@ -4,11 +4,15 @@ import axios from "axios";
 
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
+import Card from "@material-ui/core/Card";
+import Modal from "@material-ui/core/Modal";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { useTheme } from "@material-ui/core/styles";
 
 import GridLayout from "react-grid-layout";
 
 import Note from "./Note";
+import TextEditor from "./TextEditor";
 
 function Sheet(props) {
 	const user = props.user;
@@ -16,6 +20,7 @@ function Sheet(props) {
 	const [noteSequencer, setNoteSequencer] = useState(1);
 	const [layout, setLayout] = useState([]);
 	const [sheetName, setSheetName] = useState("");
+	const [editingNote, setEditingNote] = useState(null);
 
 	const [width, setWidth] = useState(window.innerWidth);
 
@@ -37,6 +42,8 @@ function Sheet(props) {
 			setNoteSequencer(notePad.length);
 			setLayout(result.data.notes);
 			setSheetName(result.data.name);
+
+			console.log("fetched sheet data successfully");
 		});
 	}
 
@@ -45,6 +52,10 @@ function Sheet(props) {
 			setWidth(window.innerWidth);
 		}
 		window.addEventListener("resize", handleResize);
+	}, []);
+
+	React.useEffect(() => {
+		console.log(layout);
 	});
 
 	/**
@@ -60,8 +71,13 @@ function Sheet(props) {
 	 * @param {Object} newLayout - The new layout
 	 */
 	function handleLayoutChange(newLayout) {
+		console.log("new layout: ", newLayout);
 		if (newLayout.length > layout.length) {
 			newLayout[newLayout.length - 1].y = getNewY(newLayout);
+		}
+		for (let i = 0; i < layout.length; i++) {
+			const oldItem = layout[i];
+			newLayout[oldItem.i].content = oldItem.content;
 		}
 		setLayout(newLayout);
 	}
@@ -111,6 +127,18 @@ function Sheet(props) {
 			});
 	}
 
+	function saveNoteText(text) {
+		const newLayout = layout;
+		newLayout[editingNote.i].content = text;
+		setLayout(newLayout);
+	}
+
+	const editorCardStyle = {
+		width: "700px",
+		maxWidth: "95vw",
+		minHeight: "400px",
+	};
+
 	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
 	return (
 		<div className="sheet">
@@ -131,7 +159,9 @@ function Sheet(props) {
 			>
 				{notes.map((note) => (
 					<div key={note}>
-						<Note></Note>
+						<Note setEditingSheet={setEditingNote} data={layout[note]}>
+							{layout[note]?.content || "default"}
+						</Note>
 					</div>
 				))}
 			</GridLayout>
@@ -145,6 +175,16 @@ function Sheet(props) {
 					</SheetActionButton>
 				)}
 			</div>
+			<Modal open={editingNote ? true : false}>
+				<ClickAwayListener onClickAway={() => setEditingNote(null)}>
+					<Card className="text-editor-card" style={editorCardStyle}>
+						<TextEditor
+							save={saveNoteText}
+							editingNote={editingNote}
+						></TextEditor>
+					</Card>
+				</ClickAwayListener>
+			</Modal>
 		</div>
 	);
 }

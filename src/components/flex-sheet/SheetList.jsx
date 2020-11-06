@@ -32,10 +32,6 @@ function SheetList(props) {
 					</li>
 				);
 			});
-			// return <>
-			//     {sheetLinks}
-			//     <Link to="/">Create new sheet</Link>
-			// </>
 		}
 		const body = sheetLinks.length ? sheetLinks : <h2>No Sheets</h2>;
 		return (

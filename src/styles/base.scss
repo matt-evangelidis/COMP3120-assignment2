@@ -30,3 +30,9 @@ a {
 .MuiCard-root {
 	padding: 8px;
 }
+
+[role="presentation"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
