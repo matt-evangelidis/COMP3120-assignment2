@@ -62,6 +62,7 @@ The src folder contains all the files and code for the frontend section of the p
 
 The server folder contains all the files and code for the backend section of the project.
 
+
 | Folders | Role |
 | ------------- | ------------- |
 | Models | Houses all the models for the various parts of the project (Notes, Sheet, User) |

@@ -85,6 +85,10 @@ On the right hand side, at the top right we can see two blue buttons:
 
 Each Note includes a text editor that allows for a broad variety of rich text composition experiences, allowing the users both basic text styles all the way to embedded media.
 
+To edit a note, double click the note in question. Once you have done so, a editable text block appears.
+Once done, just click outside of the text box.
+It works with multiple cards whilst saving/loading.
+
 We used [Draft.js](https://draftjs.org/) for the text editor
 
 
