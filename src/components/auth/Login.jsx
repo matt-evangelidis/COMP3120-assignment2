@@ -86,7 +86,7 @@ function Login(props) {
 				name="username"
 				value={username}
 				validators={['required']}
-				errorMessages={['This field is required']}
+				errorMessages={['Username field is required']}
 			/>
 			<TextValidator
 				variant="outlined"
@@ -97,7 +97,7 @@ function Login(props) {
 				type="password"
 				value={password}
 				validators={['required']}
-				errorMessages={['This field is required']}
+				errorMessages={['Password field is required']}
 			/>
 			<Button
 				variant="contained"
