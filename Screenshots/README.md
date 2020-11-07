@@ -7,6 +7,9 @@
 
 Login.png shows the login screen for out application.
 
+<img align="left" width="50%" height="200" src="login.png">
+<img align="left" width="50%" height="200" src="login_auth.png">
+<br>
 On the login screen is the username and password fields that users need to fill in to be authenticated and logged in.
 The form includes two buttons:
 1. Login
@@ -14,10 +17,14 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
-![Login Form](login.png)
+### Login Errors
+
+Login Errors: Error messages appear when the fields are empty.
+
 ## Register
 
-<img align="right" height="200" src="register.png">
+<img align="left" height="200" src="register.png">
+
 
 Regiser.png shows the registration page, where new users are able to create an account
 
@@ -29,10 +36,10 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
-<!-- ![Register](register.png) -->
 
 
 ## Header
+
 
 ![Header/navbar](Header.png)
 
