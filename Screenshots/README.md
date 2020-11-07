@@ -16,17 +16,17 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
-<!-- ![Login Form](login.png) -->
-
-## Login Errors
-
-Login Erros: Error messages appear when the fields are empty.
-
 <img align="left" height="200" src="login_auth.png">
 
 
+ Login Errors
+
+
+Login Errors: Error messages appear when the fields are empty.
+
 ## Register
 
+<img align="left" height="200" src="register.png">
 
 
 Regiser.png shows the registration page, where new users are able to create an account
@@ -38,12 +38,11 @@ It includes three input fields:
 - Password: Where the user inputs their chosen password
 
 - Repeat Password: Where the user repeats their password
-<img align="left" height="200" src="register.png">
 
-<!-- ![Register](register.png) -->
 
 
 ## Header
+
 
 ![Header/navbar](Header.png)
 
