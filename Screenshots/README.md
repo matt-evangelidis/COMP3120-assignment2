@@ -14,14 +14,14 @@ The form includes two buttons:
 1. Login
 The login button redirects the user to the Home page of the user. Which has all their saved Notes and Sheets.
 2. Register
-The Register button takes you to Register form.
+The Register button takes you to Register form.__
 
 
 ## Login Errors
 
 Login Errors: Error messages appear when the fields are empty in red.
 
-<img align="left" height="200" src="login_auth.png">  <br>
+<img align="left" height="200" src="login_auth.png">__
 
 
 
@@ -37,8 +37,8 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
-<img align="left" height="200" src="register.png">
-
+<!-- <img align="left" height="200" src="register.png"> -->
+![Registration](register.png)
 
 ## Header
 
