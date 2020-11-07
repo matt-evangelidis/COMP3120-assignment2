@@ -16,8 +16,9 @@ The Register button takes you to Register form.
 
 ![Login Form](login.png)
 
-Login Erros: Error messages appear when the fields are empty.
 <img align="left" height="200" src="login_auth.png">
+Login Erros: Error messages appear when the fields are empty.
+
 
 
 ## Register
