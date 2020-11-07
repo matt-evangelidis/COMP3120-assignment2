@@ -38,7 +38,7 @@
 		"build": "react-scripts build",
 		"test": "jest --verbose --runInBand",
 		"eject": "react-scripts eject",
-		"server": "node --max_old_space_size=2560 node_modules/.bin/react-scripts start server/server.js",
+		"server": "node --max_old_space_size=2560 server/server.js",
 		"dev-server": "nodemon server/server.js",
 		"mongoUser": "node server/models/userTest.js"
 	},
