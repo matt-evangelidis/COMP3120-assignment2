@@ -17,18 +17,18 @@ The login button redirects the user to the Home page of the user. Which has all 
 The Register button takes you to Register form.
 
 
-### Login Errors
+## Login Errors
 
 
 <img align="left" height="200" src="login_auth.png">  <br>
 
-
 Login Errors: Error messages appear when the fields are empty.
+
 
 ## Register
 
-<!-- <img align="left" height="200" src="register.png"> -->
-![Register](register.png)
+
+<img align="left" height="200" src="register.png">
 
 
 Regiser.png shows the registration page, where new users are able to create an account
