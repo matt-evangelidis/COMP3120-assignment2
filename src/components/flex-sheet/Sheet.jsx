@@ -6,7 +6,6 @@ import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
 import Card from "@material-ui/core/Card";
 import Modal from "@material-ui/core/Modal";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import { useTheme } from "@material-ui/core/styles";
 
 import GridLayout from "react-grid-layout";
@@ -16,6 +15,11 @@ import parseHTML from "html-react-parser";
 import Note from "./Note";
 import TextEditor from "./TextEditor";
 
+/**
+ * A 'flex sheet', the primary purpose of this whole app
+ * @prop {Object} user - The object containing information about the signed in user, null if user is not signed in
+ * @prop {string} sheetId - The id of the sheet. Used to fetch saved sheet from backend.
+ */
 function Sheet(props) {
 	const user = props.user;
 	const [notes, setNotes] = useState([0]);
@@ -35,6 +39,7 @@ function Sheet(props) {
 	};
 
 	if (props.sheetId && !layout.length) {
+		//# If the sheet has an iD and no notes in it, fetch notes from backend
 		axios.get(`/api/sheets/${props.sheetId}`).then((result) => {
 			const notePad = [];
 			for (let i = 0; i < result.data.notes.length; i++) {
@@ -49,6 +54,9 @@ function Sheet(props) {
 		});
 	}
 
+	/**
+	 * When the sheet component is first mounted, add a resize event handler to resize width of sheet columns
+	 */
 	React.useEffect(() => {
 		function handleResize() {
 			setWidth(window.innerWidth);
@@ -124,13 +132,16 @@ function Sheet(props) {
 			});
 	}
 
+	/**
+	 * Save newly edited content of a note
+	 * @param {string} text - The content to be saved into note
+	 */
 	function saveNoteText(text) {
 		const newLayout = layout;
 		newLayout[editingNote.i].content = text;
 		setLayout(newLayout);
 	}
 
-	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
 	return (
 		<div className="sheet">
 			<span>Sheet Name</span>
@@ -177,8 +188,14 @@ function Sheet(props) {
 			</Modal>
 		</div>
 	);
+	//TODO: Better width scaling (eg; Minimum card width, change columns, actually use libraries scaling?)
+	//TODO: Save changes to existing sheet instead of always creating a new one. Use the sheet id in the window address bar to determine where to save it
 }
 
+/**
+ * Component for floating 'sheet action buttons'
+ * @prop {*} * - All passed props are passed down to the root 'Fab' element
+ */
 function SheetActionButton(props) {
 	const theme = useTheme();
 	const style = { marginRight: theme.spacing(1) };

@@ -4,19 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-// import Paper from "@material-ui/core/Paper";
-// import { withStyles } from "@material-ui/core/styles";
-
-// const styles = {
-// 	textField: {
-// 		width: "100%",
-// 		marginBottom: 5,
-// 	},
-// 	btnBlock: {
-// 		textAlign: "center",
-// 	},
-// };
-
+/**
+ * User registration form, is not implemented
+ */
 class Register extends React.Component {
 	constructor(props) {
 		super(props);
@@ -48,12 +38,7 @@ class Register extends React.Component {
 	}
 	// Registration form
 	render() {
-		// const { classes } = this.props;
 		const { errors } = this.state;
-
-		/* I removed the 'Paper' element because I think stuff like paper or cards should not be part of the actual component
-        instead the something like 'Paper' would be wrapped around this component when it is usedOtherwise if we wanted to use 
-        the register menu in a different place/context it might be awkward */
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<Typography variant="h4" component="h1">
@@ -113,13 +98,4 @@ class Register extends React.Component {
 		);
 	}
 }
-const mapStateToProps = (state) => ({
-	errors: state.errors,
-});
-
-// export default connect(mapStateToProps, { registerUser })(
-// 	withRouter(withStyles(styles)(Register))
-// );
-//Not sure what this actually is, commenting it out for now so I can use this component
-
 export default Register;

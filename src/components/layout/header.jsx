@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -7,6 +7,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
+/**
+ * The header of the website
+ * @prop {Object} user - The object containing information about the signed in user, null if user is not signed in
+ */
 function Header(props) {
 	const sheetsLinkStyle = {
 		margin: "auto",

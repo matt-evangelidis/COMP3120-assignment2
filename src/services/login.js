@@ -1,10 +1,15 @@
 import axios from "axios";
 const url = "/api/users/login";
 
-// sending the HTTP post request to server address ‘/login’
+/**
+ * Send a post request to sign in user
+ * @param {Object} credentials - Credentials entered into login form by user
+ * @param {string} credentials.username - Provided username
+ * @param {string} credentials.password - Provided username
+ * @returns {Promise} The promise for the post request
+ **/
 const login = async (credentials) => {
-	// const response = await axios.post(url, credentials);
-	// return response.data;
+	console.log(credentials);
 	return axios.post(url, credentials);
 };
 
