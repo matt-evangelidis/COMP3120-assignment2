@@ -19,16 +19,13 @@ The Register button takes you to Register form.
 
 ## Login Errors
 
+Login Errors: Error messages appear when the fields are empty in red.
+
 <img align="left" height="200" src="login_auth.png">  <br>
 
-Login Errors: Error messages appear when the fields are empty in red.
 
 
 ## Register
-
-
-<img align="left" height="200" src="register.png">
-
 
 Regiser.png shows the registration page, where new users are able to create an account
 
@@ -40,6 +37,7 @@ It includes three input fields:
 
 - Repeat Password: Where the user repeats their password
 
+<img align="left" height="200" src="register.png">
 
 
 ## Header
