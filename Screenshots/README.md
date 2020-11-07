@@ -21,8 +21,8 @@ The Register button takes you to Register form. <br />
 
 Login Errors: Error messages appear when the fields are empty in red.
 
-<img align="left" height="300" src="login_auth.png"> <br />
-
+<!-- <img align="left" height="300" src="login_auth.png"> <br /> -->
+![Login Erros](login_auth.png)
 
 
 ## Register
