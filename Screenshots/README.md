@@ -14,14 +14,14 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
-![Login Form](login.png)
+<!-- ![Login Form](login.png) -->
+<img align="left" height="200" src="login.png">
 
 ### Login Errors
 
-
 Login Erros: Error messages appear when the fields are empty.
 
-<img align="left" height="200" src="login_auth.png">
+<img align="right" height="200" src="login_auth.png">
 
 
 ## Register
