@@ -7,8 +7,8 @@
 
 Login.png shows the login screen for out application.
 
-<img align="left" height="300" src="login.png">
-
+<!-- <img align="left" height="300" src="login.png"> -->
+![Login](login.png)
 On the login screen is the username and password fields that users need to fill in to be authenticated and logged in.
 The form includes two buttons:
 1. Login
