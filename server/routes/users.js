@@ -1,7 +1,7 @@
 //# Router for handlings all requests to '/api/users'
 
 const router = require("express").Router();
-const User = require("../models/User");
+const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const validateLoginInput = require("../validation/login");
 // const validateRegisterInput = require('../validation/register')
