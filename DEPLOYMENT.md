@@ -12,6 +12,8 @@ To get the back end server running
 Enter the Terminal and type:
 1. npm run dev-server
 
+## Heroku
+
 
 ![Backend Termianl](/Screenshots/backend.png)
 

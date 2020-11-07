@@ -23,7 +23,8 @@ Login Errors: Error messages appear when the fields are empty.
 
 ## Register
 
-<img align="left" height="200" src="register.png">
+<!-- <img align="left" height="200" src="register.png"> -->
+![Register](register.png)
 
 
 Regiser.png shows the registration page, where new users are able to create an account
