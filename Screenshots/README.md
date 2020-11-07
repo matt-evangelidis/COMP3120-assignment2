@@ -9,7 +9,7 @@ Login.png shows the login screen for out application.
 
 <img align="left" width="50%" height="200" src="login.png">
 
-On the login screen is the username and password fields that users need to fill in to be authenticated and logged in.\
+On the login screen is the username and password fields that users need to fill in to be authenticated and logged in.
 The form includes two buttons:
 1. Login
 The login button redirects the user to the Home page of the user. Which has all their saved Notes and Sheets.
@@ -19,10 +19,9 @@ The Register button takes you to Register form.
 
 ## Login Errors
 
-
 <img align="left" height="200" src="login_auth.png">  <br>
 
-Login Errors: Error messages appear when the fields are empty.
+Login Errors: Error messages appear when the fields are empty in red.
 
 
 ## Register
@@ -61,7 +60,7 @@ The login button has been replace with a User button, showing which user is curr
 Additionally, a SHEETS button has been added in the middle of the header, which allows the user to be redirected to the sheets page.
 
 
-## Lougout
+## Logout
 
 Lougout.png illustrates how the logout is displayed for the user.
 
@@ -113,6 +112,7 @@ Sheets.png shows the sheets page where the user is able to pick a sheet to open 
 
 Each user has their own list of saved sheets, which are saved to MongoDB. Whenever the user saves a sheet it will be added to the list 
 on the top left. Each sheet when clicked directs the user into the sheet.
+
 
 Under all the sheets is a link to create another sheet.
 

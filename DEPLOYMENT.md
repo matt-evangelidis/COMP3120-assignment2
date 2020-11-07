@@ -14,9 +14,10 @@ Enter the Terminal and type:
 
 ## Heroku
 
+Deployment
 1. Commit Changes
-2. Git push [insert here] master
-3. Git push [insert here] master
+2. Git push heroku HEAD:master
+
 
 
 ![Backend Termianl](/Screenshots/backend.png)
