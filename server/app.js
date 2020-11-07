@@ -14,6 +14,10 @@ app.use(cors());
 app.use("/api/users", usersRouter);
 app.use("/api/sheets", sheetsRouter);
 
+if (!process.env.BACKEND_PORT) {
+	app.use(express.static("build"));
+}
+
 app.get("/", (req, res) => {
 	res.send("<h1>Hello World, but this time it came from the server</h1>");
 });
