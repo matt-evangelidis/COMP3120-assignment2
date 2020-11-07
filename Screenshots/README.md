@@ -17,16 +17,16 @@ The Register button takes you to Register form.
 <!-- ![Login Form](login.png) -->
 <img align="left" height="200" src="login.png">
 
-### Login Errors
+## Login Errors
 
 Login Erros: Error messages appear when the fields are empty.
 
-<img align="right" height="200" src="login_auth.png">
+<img align="left" height="200" src="login_auth.png">
 
 
 ## Register
 
-<img align="right" height="200" src="register.png">
+<img align="left" height="200" src="register.png">
 
 Regiser.png shows the registration page, where new users are able to create an account
 
