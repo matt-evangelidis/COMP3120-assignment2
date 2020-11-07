@@ -3,25 +3,28 @@
 ## Local Server
 
 ### Front-End
+
 To get the front end running type:
+
 1. npm start
 
 ### Back-End
-To get the back end server running 
+
+To get the back end server running
 
 Enter the Terminal and type:
+
 1. npm run dev-server
 
 ## Heroku
 
 Deployment
+
 1. Commit Changes
 2. Git push heroku HEAD:master
 
+![Backend Terminal](/Screenshots/backend.png)
 
+## Live App
 
-![Backend Termianl](/Screenshots/backend.png)
-
-A link to a deployed version of your application if available
-Information on how to run and build the project, eg. if someone were to take over development
-Information about any use of Continuous Integration you have implemented.
+[http://www.flex-sheet.com](http://www.flex-sheet.com)

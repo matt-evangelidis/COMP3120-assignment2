@@ -1,7 +1,7 @@
 # Flex-Sheet
 
-
 ## Outline
+
 Flex Sheet is designed as a tabletop rpg digital character sheet solution. The core concept of
 flex sheets is cards. Cards are created by the user and are given a title and some body text.
 Cards can be moved around the screen as well as resized, all within a grid. This allows users to
@@ -18,59 +18,56 @@ were often too strict on enforcing their own system on how information was portr
 while form fillable pdfs offer some degree of flexibility, they also had their own unique problem
 of awkward and buggy text display issues.
 
-## Reference
-A reference to your second Github repository if you used one
-
 ## Milestones
 
-| Weeks | Milestones |
-| ------------- | ------------- |
-| Week 9 | **Project Strucutre**: Implement the projects structure. Create all the folders and layout. |
+| Weeks   | Milestones                                                                                                                                                                                                                                                                            |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Week 9  | **Project Strucutre**: Implement the projects structure. Create all the folders and layout.                                                                                                                                                                                           |
 | Week 10 | **Data Storage**: A MongoDB Atlas project has been initialised and is connected to the application. Data models for most entities have been written. **Authentication**: A rudimentary authentication system consisting of user login, including backend and frontend implementation. |
-| Week 11 | **Cards**: The Card/Grid system has been implemented, allowing users to create new cards, drag them to move them around the grid as well as resize them. Card text content is not yet implemented. |
-| Week 12 | **Card Text**: Text content of cards is implemented with a rich text editor. |
+| Week 11 | **Cards**: The Card/Grid system has been implemented, allowing users to create new cards, drag them to move them around the grid as well as resize them. Card text content is not yet implemented.                                                                                    |
+| Week 12 | **Card Text**: Text content of cards is implemented with a rich text editor.                                                                                                                                                                                                          |
 
 ## Project Source Code Guide
+
 The project is split into two sections:
+
 1. Front (src)
 2. Back (server)
 
 ### Front-End (src)
+
 <!-- ![Frontend folders](/Screenshots/src.png) -->
 <img align="left" height="200" src="/Screenshots/src.png">
 
 The src folder contains all the files and code for the frontend section of the project.
 
-
-| Folders | Role |
-| ------------- | ------------- |
-| Actions| Authicates post and get requests |
-| Components | Houses most of the projects parts. Including auth, Notes, Sheets, the Layout |
-| Constants | Houses the index  |
-| Services | Holds login.js that sends the HTTP post request to /login |
-| Styles | Stores all the different styling for the Frontend|
-| Utils |  |
-| App |  Provides a baseline css stylesheet that will override any default browser styles |
-| Index | Authicates post and get requests |
-| Theme | Houses themes used on the frontend |
-
+| Folders    | Role                                                                             |
+| ---------- | -------------------------------------------------------------------------------- |
+| Actions    | Authicates post and get requests                                                 |
+| Components | Houses most of the projects parts. Including auth, Notes, Sheets, the Layout     |
+| Constants  | Houses the index                                                                 |
+| Services   | Holds login.js that sends the HTTP post request to /login                        |
+| Styles     | Stores all the different styling for the Frontend                                |
+| Utils      |                                                                                  |
+| App        | Provides a baseline css stylesheet that will override any default browser styles |
+| Index      | Authicates post and get requests                                                 |
+| Theme      | Houses themes used on the frontend                                               |
 
 ### Back-End (server)
+
 <!-- ![Backend Folders](/Screenshots/backendfiles.png) -->
 <img align="right" height="200" src="/Screenshots/backendfiles.png">
 
-
 The server folder contains all the files and code for the backend section of the project.
 
-
-| Folders | Role |
-| ------------- | ------------- |
-| Models | Houses all the models for the various parts of the project (Notes, Sheet, User) |
-| Routes | Houses the sheets and user routes for the server |
-| Tests | User testing to make sure everything is working |
+| Folders    | Role                                                                                     |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| Models     | Houses all the models for the various parts of the project (Notes, Sheet, User)          |
+| Routes     | Houses the sheets and user routes for the server                                         |
+| Tests      | User testing to make sure everything is working                                          |
 | Validation | Authentication to make sure the correct information is being used and sent to the server |
-| app.js |  |
-| server.js |  |
+| app.js     | Initialises routers and static assets and contains a base URL catch all 'get' route      |
+| server.js  | Imports app form 'app.js' and sets it to listen                                          |
 
 ## Summary of Next Steps
 
@@ -82,14 +79,14 @@ Below is an example of how formulas could work.
 
 ## Main Roles
 
-| Role  | Assigned User |
-| ------------- | ------------- |
-| Backend  | Suphichaya Chaochuangchot  |
-| Frontend  | Thomas Clark  |
-| Database  | Matthew Evangelidis  |
-| Backend  | Justin Erasmus  |
+| Role     | Assigned User             |
+| -------- | ------------------------- |
+| Backend  | Suphichaya Chaochuangchot |
+| Frontend | Thomas Clark              |
+| Database | Matthew Evangelidis       |
+| Backend  | Justin Erasmus            |
 
-- The team mainly used discord as our communication platform, where each member was able to share files, join voice and video calls, discuss topics and brainstorm together. 
+- The team mainly used discord as our communication platform, where each member was able to share files, join voice and video calls, discuss topics and brainstorm together.
 - Another product used was Trello, allowing the team to keep track of what what has been done, what is currently being worked on and what needs to be completed in the future.
 
 ## Development Guidelines
@@ -104,20 +101,3 @@ After pulling this project run `npm install` before starting work.
 
 This app makes use of the 'Better Comments' extension for Visual Studio Code and uses the following tags as defined in the workspace settings file:
 ![comment descriptions](https://i.imgur.com/avunwoW.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
