@@ -8,7 +8,6 @@
 Login.png shows the login screen for out application.
 
 <img align="left" width="50%" height="200" src="login.png">
-<img align="left" height="200" src="login_auth.png">  <br>
 
 On the login screen is the username and password fields that users need to fill in to be authenticated and logged in.\
 The form includes two buttons:
@@ -17,7 +16,12 @@ The login button redirects the user to the Home page of the user. Which has all 
 2. Register
 The Register button takes you to Register form.
 
+
 ### Login Errors
+
+
+<img align="left" height="200" src="login_auth.png">  <br>
+
 
 Login Errors: Error messages appear when the fields are empty.
 
