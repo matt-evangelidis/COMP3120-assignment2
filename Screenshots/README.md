@@ -14,14 +14,14 @@ The form includes two buttons:
 1. Login
 The login button redirects the user to the Home page of the user. Which has all their saved Notes and Sheets.
 2. Register
-The Register button takes you to Register form.__
+The Register button takes you to Register form. <br />
 
 
 ## Login Errors
 
 Login Errors: Error messages appear when the fields are empty in red.
 
-<img align="left" height="200" src="login_auth.png">__
+<img align="left" height="200" src="login_auth.png"> <br />
 
 
 
