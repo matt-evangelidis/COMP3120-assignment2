@@ -43,14 +43,14 @@ The src folder contains all the files and code for the frontend section of the p
 
 | Folders    | Role                                                                             |
 | ---------- | -------------------------------------------------------------------------------- |
-| Actions    | Authicates post and get requests                                                 |
+| Actions    | Authenticates post and get requests                                              |
 | Components | Houses most of the projects parts. Including auth, Notes, Sheets, the Layout     |
 | Constants  | Houses the index                                                                 |
 | Services   | Holds login.js that sends the HTTP post request to /login                        |
 | Styles     | Stores all the different styling for the Frontend                                |
-| Utils      |                                                                                  |
+| Utils      | Utility functions                                                                |
 | App        | Provides a baseline css stylesheet that will override any default browser styles |
-| Index      | Authicates post and get requests                                                 |
+| Index      | Authenticates post and get requests                                              |
 | Theme      | Houses themes used on the frontend                                               |
 
 ### Back-End (server)
