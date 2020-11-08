@@ -4,24 +4,28 @@
 
 ### Front-End
 
-To get the front end running type:
+To get the front end running, 
+
+enter the terminal and type:
 
 1. npm start
 
 ### Back-End
 
-To get the back end server running
+To get the back end server running,
 
-Enter the Terminal and type:
+enter the terminal and type:
 
 1. npm run dev-server
 
-## Heroku
+## Deployment to the Internet
+
+### Heroku
 
 Deployment
 
-1. Commit Changes
-2. Git push heroku HEAD:master
+1. Commit changes to the repository
+2. Run the command: git push heroku HEAD:master
 
 ![Backend Terminal](/Screenshots/backend.png)
 
