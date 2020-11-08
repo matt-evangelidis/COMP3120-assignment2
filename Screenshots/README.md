@@ -5,15 +5,15 @@
 
 ## Login
 
-Login.png shows the login screen for out application.
+Login.png shows the login screen for our application.
 
 <!-- <img align="left" height="300" src="login.png"> -->
 ![Login](login.png)
 On the login screen is the username and password fields that users must fill in to be authenticated and logged in.
 The form includes two buttons:
-1. Login
+1. Login:
 The login button redirects the user to the Home page specific to the user, which contains all their saved Notes and Sheets.
-2. Register
+2. Register:
 The Register button takes you to Register form. <br />
 
 
@@ -105,7 +105,7 @@ We used [Draft.js](https://draftjs.org/) for the text editor
 
 <img align="left" height="200" src="sheets.png">
 
-Sheets.png shows the Sheets page, where the user is able to pick a Sheet to open it and see its saved Notes(contents)
+Sheets.png shows the Sheets page, where the user is able to pick a Sheet to open it and see its saved Notes (contents)
 
 Each user has their own list of saved Sheets, which are saved to MongoDB. Whenever the user saves a Sheet, it will be added to the list 
 on the top left. Each Sheet when clicked directs the user into the sheet.
