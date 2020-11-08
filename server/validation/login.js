@@ -3,13 +3,13 @@ const isEmpty = require("is-empty");
 
 module.exports = function (data) {
 	let errors = {};
-	// Username Fields
+	// # Checking if the Username Field us empty
 	if (Validator.isEmpty(String(data.username))) {
-		errors.username = "Username field is required";
+		errors.username = "Username field is required"; //*If so return the following message
 	}
-	// Password Fields
+	// # Checking if the Password Field us empty
 	if (Validator.isEmpty(String(data.password))) {
-		errors.password = "Password field is required";
+		errors.password = "Password field is required"; //*If so return the following message
 	}
 
 	return {
@@ -17,5 +17,3 @@ module.exports = function (data) {
 		isValid: isEmpty(errors),
 	};
 };
-
-// placeholder

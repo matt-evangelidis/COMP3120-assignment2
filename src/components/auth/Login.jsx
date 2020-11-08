@@ -8,11 +8,8 @@ import {
 	useHistory,
 } from "react-router-dom";
 
-import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
-import Typography from "@material-ui/core/Typography";
-
 import loginService from "../../services/login";
 
 /**
@@ -38,12 +35,12 @@ function Login(props) {
 			.login({ username, password })
 			.then((res) => {
 				props.setUserFn(res.data);
-				history.push("/"); //# Redirecting to home page after login using useHistory() function
+				history.push("/"); //* Redirecting to home page after login using useHistory() function
 				console.log("Login successful");
 			})
 			.catch((error) => {
 				console.log("there was an error");
-				alert("Incorrect username or password! Please try again"); //# Alert for any login error
+				alert("Incorrect username or password! Please try again"); //* Alert for any login error
 			});
 	};
 
@@ -56,7 +53,7 @@ function Login(props) {
 		window.location.href = "/login";
 	};
 
-	// #If user already login, when click on the username again it will show that this account is currently login as...
+	//# If user already login, when click on the username again it will show that this account is currently login as...
 	if (props.user) {
 		console.log("user is login");
 		return (
@@ -83,9 +80,10 @@ function Login(props) {
 				</Button>
 			</form>
 		);
+	//#  ... Otherwise the user will need to login 
 	} else {
 		return (
-			<ValidatorForm onSubmit={submitHandler}>
+			<ValidatorForm onSubmit={submitHandler}> //* Validating the form
 				<h2>Login</h2>
 				<TextValidator
 					variant="outlined"
@@ -94,8 +92,8 @@ function Login(props) {
 					onChange={(e) => handlers.username(e.target.value)}
 					name="username"
 					value={username}
-					validators={["required"]}
-					errorMessages={["Username field is required"]}
+					validators={["required"]} //* This is for validating that the username field is required for login
+					errorMessages={["Password field is required"]} //* ...and if the field is empty return the following message
 				/>
 				<TextValidator
 					variant="outlined"
@@ -105,8 +103,8 @@ function Login(props) {
 					name="password"
 					type="password"
 					value={password}
-					validators={["required"]}
-					errorMessages={["Password field is required"]}
+					validators={["required"]} //* This is for validating that the password field is required for login
+					errorMessages={["Password field is required"]} //* ...and if the field is empty return the following message
 				/>
 				<Button variant="contained" fullWidth color="primary" type="submit">
 					Login

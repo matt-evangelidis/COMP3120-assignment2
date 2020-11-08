@@ -20,22 +20,20 @@ router.post("/login", (req, res) => {
 
 	// # Find user by username
 	User.findOne({ username }).then((user) => {
-		// # Check if user exists
-
 		const correctCreds = user ? password === user.password : false;
 
 		if (!correctCreds) {
 			console.log("Login failed - bad credentials");
-			return res.status(400).json({ error: "incorrect username or password" }); // * Return 400 Error if passed credentials are
+			return res.status(400).json({ error: "incorrect username or password" }); //*Return 400 Error if passed credentials are incorrect
 		}
 
+		//# If username and password are correct, a token is created, which contains username, user id in a
+		//# digitally signed form; it is signed using a string from the environment variable SECRET as the secret
 		const userForToken = {
 			username: user.username,
 			id: user._id,
 		};
 
-		//# If username and password are correct, a token is created, which contains username, user id in a
-		//# digitally signed form; it is signed using a string from the environment variable SECRET as the secret
 		const token = jwt.sign(userForToken, process.env.SECRET);
 
 		res
