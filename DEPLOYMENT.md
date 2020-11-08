@@ -29,6 +29,10 @@ Deployment
 
 ![Backend Terminal](/Screenshots/backend.png)
 
+## Future Changes
+
+- The password field in the User object, along with the backend routes for handling logins, will need to be updated to instead store and verify password hashes rather than the direct passwords themselves for obvious security pruposes.
+
 ## Live App
 
 [http://www.flex-sheet.com](http://www.flex-sheet.com)
