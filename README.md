@@ -3,20 +3,20 @@
 ## Outline
 
 Flex Sheet is designed as a tabletop rpg digital character sheet solution. The core concept of
-flex sheets is cards. Cards are created by the user and are given a title and some body text.
+Flex Sheet is cards. Cards are created by the user and are given a title and some body text.
 Cards can be moved around the screen as well as resized, all within a grid. This allows users to
 define exactly how they layout their character sheets. For an example of how cards will work,
 see [this demo](https://strml.github.io/react-grid-layout/examples/11-no-vertical-compact.html)
 
 The target user group for Flex Sheet is players of tabletop roleplaying games such as Dungeons
-and Dragons and Pathfinder. Users will use the app to track information and statistics about
-their characters. Flex Sheet is designed as a kind of response to the many other digital solutions
-that exist to fulfill a very similar purpose, but with one particular aspect in mind; ‘flexibility’.
-While using other similar solutions such as dedicated apps such as the official Dungeons and
-Dragons character sheet app or form fillable pdfs, we have found that dedicated applications
-were often too strict on enforcing their own system on how information was portrayed, and
-while form fillable pdfs offer some degree of flexibility, they also had their own unique problem
-of awkward and buggy text display issues.
+& Dragons, Pathfinder and others. Users will use the app to track information and statistics about
+their characters. Flex Sheet is designed in response to the many other digital solutions
+available designed to fulfill a very similar purpose, but with one particular aspect in mind; ‘flexibility’.
+In our own experiences using other similar solutions, with dedicated apps such as the official Dungeons &
+Dragons character sheet app or form fillable PDFs, we found that dedicated applications
+were often too strict in how information was portrayed, and while form fillable PDFs 
+offer some degree of flexibility, they also had their own unique problems
+with awkward and buggy text display issues.
 
 ## Milestones
 
@@ -62,16 +62,16 @@ The server folder contains all the files and code for the backend section of the
 
 | Folders    | Role                                                                                     |
 | ---------- | ---------------------------------------------------------------------------------------- |
-| Models     | Houses all the models for the various parts of the project (Notes, Sheet, User)          |
+| Models     | Houses all the databse models for the various parts of the project (Notes, Sheet, User)  |
 | Routes     | Houses the sheets and user routes for the server                                         |
-| Tests      | User testing to make sure everything is working                                          |
-| Validation | Authentication to make sure the correct information is being used and sent to the server |
-| app.js     | Initialises routers and static assets and contains a base URL catch all 'get' route      |
+| Tests      | User testing to ensure everything is working                                             |
+| Validation | Authentication to ensure the correct information is being used and sent to the server    |
+| app.js     | Initialises routers and static assets and contains a base URL catch-all 'get' route      |
 | server.js  | Imports app form 'app.js' and sets it to listen                                          |
 
 ## Summary of Next Steps
 
-The next stage of this project would be to include formulas: Formulas in Flex Sheet work very similar to how they work in Microsoft Excel. Users can name certain values, and can then reference those named values in math formulas within the body content of cards. Below is an example of how formulas could work. Unfortunately we weren’t able to successfully implement this concept within the time period available.
+The next stage of this project would be to include formulas: Formulas in Flex Sheet work very similar to how they work in Microsoft Excel and other spreadsheet applications. Users can name certain values, and then reference those named values in math formulas within the body content of cards. Below is an example of how formulas could work. Unfortunately we weren’t able to successfully implement this concept within the time period available.
 
 Below is an example of how formulas could work.
 
@@ -86,7 +86,7 @@ Below is an example of how formulas could work.
 | Database | Matthew Evangelidis       |
 | Backend  | Justin Erasmus            |
 
-- The team mainly used discord as our communication platform, where each member was able to share files, join voice and video calls, discuss topics and brainstorm together.
+- The team mainly used Discord as our communication platform, where each member was able to share files, join voice and video calls, discuss topics and brainstorm together.
 - Another product used was Trello, allowing the team to keep track of what what has been done, what is currently being worked on and what needs to be completed in the future.
 
 ## Development Guidelines
@@ -95,7 +95,7 @@ This section describes some guidelines that should be followed when contributing
 
 ### Pulling
 
-After pulling this project run `npm install` before starting work.
+After pulling this project, run `npm install` before starting work.
 
 ### Better Comments
 
